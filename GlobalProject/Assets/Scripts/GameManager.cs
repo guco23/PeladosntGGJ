@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{
+{   
     
     static GameManager instance;
     static public GameManager Instance { get { return instance; } }
 
 
-    private int numPlayers;
+    private int numPlayers = 2;
     private int actualPlayer = 0;
 
     private void Awake()
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         
         Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
         ++actualPlayer;
-        if (actualPlayer > numPlayers)
+        if (actualPlayer > numPlayers && scene.name != "EndScene")
         {
             SceneManager.LoadScene("EndScene");
         }
