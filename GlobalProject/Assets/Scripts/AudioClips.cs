@@ -13,7 +13,7 @@ public class AudioClips : MonoBehaviour
     void Start()
     {
         mySrc = GetComponent<AudioSource>();
-        Debug.Log(mySrc.clip.name);
+        //Debug.Log(mySrc.clip.name);
     }
 
     // Update is called once per frame
