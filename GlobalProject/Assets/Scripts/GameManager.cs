@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private int numPlayers = 2;
     private int actualPlayer = 0;
+    private bool GamePaused;
 
     private void Awake()
     {
@@ -55,6 +57,24 @@ public class GameManager : MonoBehaviour
         if (actualPlayer > numPlayers && scene.name != "EndScene")
         {
             SceneManager.LoadScene("EndScene");
+        }
+    }
+    public void PauseGame(InputAction.CallbackContext call)
+    {
+        PauseGame();
+    }
+
+    public void PauseGame()
+    {
+        if (GamePaused)
+        {
+            Time.timeScale = 1;
+            GamePaused = false;
+        }
+        else
+        {
+            Time.timeScale = 0;
+            GamePaused = true;
         }
     }
     public void Exit()
