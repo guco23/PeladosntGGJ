@@ -163,7 +163,7 @@ public class PlayerRaycast : MonoBehaviour
             //si hemos dado a un objeto interactuable
             if (currentItObject != null)
             {
-                Debug.Log("Resaltar "+currentItObject.name);
+                //Debug.Log("Resaltar "+currentItObject.name);
             }
 
         }
