@@ -104,14 +104,7 @@ public class PlayerRaycast : MonoBehaviour
 
             zoomState = true;
 
-            //si hemos dado a un objeto visual
-            if (currentVisualObject != null)
-            {
-                //añadir a la lista de acciones
-                playerManager.AddAction("mira a " + currentVisualObject.getName());
-                //hacer el zoom de la camara
-                CameraZoom();
-            }
+            
         }
         else
         {
@@ -130,11 +123,6 @@ public class PlayerRaycast : MonoBehaviour
 
     }
 
-    //funcion que hace el zoom de la camara
-    void CameraZoom()
-    {
-
-    }
 
 
     void Start()
@@ -160,30 +148,41 @@ public class PlayerRaycast : MonoBehaviour
         if (zoomState)
         {
 
-            if (cam.fieldOfView > minZoomView)
+            if (camPlayer.m_Lens.FieldOfView > minZoomView)
             {
 
                 camPlayer.m_Lens.FieldOfView -= zoomSpeed;
 
-                Debug.Log(cam.fieldOfView);
             }
             else
             {
 
                 camPlayer.m_Lens.FieldOfView = minZoomView;
 
+                //si hemos dado a un objeto visual
+                if (currentVisualObject != null)
+                {
+                    //añadir a la lista de acciones
+                    playerManager.AddAction("mira a " + currentVisualObject.getName());
+                    //hacer el zoom de la camara
+
+                    currentVisualObject = null;
+                }
+
             }
 
         }
         else
         {
-            if (cam.fieldOfView < initialView)
+            if (camPlayer.m_Lens.FieldOfView < initialView)
             {
                 camPlayer.m_Lens.FieldOfView += zoomSpeed;
             }
             else
             {
                 camPlayer.m_Lens.FieldOfView = initialView;
+
+               
             }
 
         }
