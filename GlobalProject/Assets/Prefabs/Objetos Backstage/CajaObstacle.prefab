@@ -108,7 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c714b4fc985653247bfdcf4ef3c61e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTag: 
+  obstacleTag: caja
+  saltando: 1
 --- !u!114 &539510868697976278
 MonoBehaviour:
   m_ObjectHideFlags: 0
