@@ -13,7 +13,7 @@ public class PlaceComponent : MonoBehaviour
         PlayerPlaceComponent playerPlaceComponent = other.GetComponent<PlayerPlaceComponent>();
         if(playerPlaceComponent != null)
         {
-            playerPlaceComponent.enteredPlace(this.placeTag);
+            playerPlaceComponent.enteredPlace(this.placeTag,this);
         }
     }
 

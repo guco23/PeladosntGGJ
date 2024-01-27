@@ -13,6 +13,8 @@ public class PlayerRaycast : MonoBehaviour
     //camara
     Camera cam;
 
+    CooldownComponent cooldownComponent;
+
     [SerializeField] private CinemachineVirtualCamera camPlayer;
 
     //variables para lanzar rayos
@@ -64,19 +66,30 @@ public class PlayerRaycast : MonoBehaviour
 
                 if(actionObject != null)
                 {
-                    actionObject.Action();
+                    cooldownComponent = actionObject.GetComponent<CooldownComponent>();
 
-                    //cambiar el nombre de la frase por frase personalizada?
-                    playerManager.AddAction("interactuas con " + currentItObject.getName());
+                    if(cooldownComponent != null && cooldownComponent.CanAction())
+                    {
+                        actionObject.Action();
+
+                        //cambiar el nombre de la frase por frase personalizada?
+                        playerManager.AddAction("interactuas con " + currentItObject.getName());
+
+                        cooldownComponent.ResetCooldown();
+                    }
                 }
                 else
                 {
                     pickeableObject = currentItObject.GetComponent<PickeableObject>();
 
                     if(pickeableObject != null)
-                    {
+                    {                     
+                        playerManager.AddAction("coges el objeto " + currentItObject.getName());
+
+
                         playerManager.AddItem(currentItObject.getName());
                         pickeableObject.Pick();
+                        
                     }
                 }            
             }
@@ -163,11 +176,18 @@ public class PlayerRaycast : MonoBehaviour
                 //si hemos dado a un objeto visual
                 if (currentVisualObject != null)
                 {
-                    //añadir a la lista de acciones
-                    playerManager.AddAction("mira a " + currentVisualObject.getName());
-                    //hacer el zoom de la camara
+                    cooldownComponent =    currentVisualObject.GetComponent<CooldownComponent>();
 
-                    currentVisualObject = null;
+                    if (cooldownComponent.CanAction())
+                    {
+                        //añadir a la lista de acciones
+                        playerManager.AddAction("mira a " + currentVisualObject.getName());
+                        //hacer el zoom de la camara
+
+                        currentVisualObject = null;
+
+                        cooldownComponent.ResetCooldown();
+                    }
                 }
 
             }
