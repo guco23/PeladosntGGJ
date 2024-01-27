@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
     PlayerRaycast playerRaycast;
     PlayerPlaceComponent playerPlaceComponent;
 
+    //SERIALIZADAS PARA DEBUG
+
     //lista de las acciones que se han ido haciendo
     [SerializeField]
     List<string> actionsList = new List<string>();
@@ -22,7 +24,6 @@ public class PlayerManager : MonoBehaviour
         if (context.performed)
         {
             playerRaycast.InteractObject();
-
         }
     }
 
@@ -38,7 +39,12 @@ public class PlayerManager : MonoBehaviour
     {
         if (context.performed)
         {
-
+            string place = playerPlaceComponent.getCurrentPlace();
+            print(place);
+            if (place != "")
+            {
+                AddAction("salta en " + place);
+            }
         }
     }
 
@@ -46,7 +52,11 @@ public class PlayerManager : MonoBehaviour
     {
         if (context.performed)
         {
-
+            string place = playerPlaceComponent.getCurrentPlace();
+            if (place != "")
+            {
+                AddAction("agachate en " + place);
+            }
         }
     }
 

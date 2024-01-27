@@ -25,7 +25,7 @@ public class PlayerPlaceComponent : MonoBehaviour
     /**
      * Devuelve el tag del place en el que se encuentra
      */
-    string getCurrentPlace()
+    public string getCurrentPlace()
     { 
         return currentPlace;
     }
