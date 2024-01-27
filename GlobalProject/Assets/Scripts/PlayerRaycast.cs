@@ -24,6 +24,7 @@ public class PlayerRaycast : MonoBehaviour
     //objetos actuales(interactivo y visual)
     InteractiveObject currentItObject = null;
     VisualObject currentVisualObject = null;
+    InteractiveObject lastItObject = null;
 
     //distancias de cada rayo, serializadas
     [SerializeField]
@@ -161,11 +162,17 @@ public class PlayerRaycast : MonoBehaviour
             currentItObject = hit.collider.GetComponent<InteractiveObject>();
 
             //si hemos dado a un objeto interactuable
-            if (currentItObject != null)
+            if(currentItObject != null)
             {
-                //Debug.Log("Resaltar "+currentItObject.name);
-            }
 
+                currentItObject.SetColor(true);
+                lastItObject = currentItObject;
+            }
+            else
+            {
+                lastItObject?.SetColor(false);
+
+            }
         }
     }
 
@@ -196,7 +203,7 @@ public class PlayerRaycast : MonoBehaviour
 
                     if (cooldownComponent.CanAction())
                     {
-                        //añadir a la lista de acciones
+                        //aï¿½adir a la lista de acciones
                         playerManager.AddAction("mira a " + currentVisualObject.getName());
                         //hacer el zoom de la camara
 
