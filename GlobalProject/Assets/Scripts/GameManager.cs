@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            SceneManager.sceneLoaded += updateNewScene;
         }
         DontDestroyOnLoad(gameObject);
     }
@@ -37,5 +38,14 @@ public class GameManager : MonoBehaviour
     public void SetPlayeNum(string number)
     {
         numPlayers = int.Parse(number);
+    }
+    void updateNewScene(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Tu mama");
+        actualPlayer++;
+        if (actualPlayer == numPlayers)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
     }
 }
