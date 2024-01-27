@@ -164,12 +164,14 @@ public class PlayerRaycast : MonoBehaviour
             //si hemos dado a un objeto interactuable
             if(currentItObject != null)
             {
+
                 currentItObject.SetColor(true);
                 lastItObject = currentItObject;
             }
             else
             {
                 lastItObject?.SetColor(false);
+
             }
         }
     }
@@ -201,7 +203,7 @@ public class PlayerRaycast : MonoBehaviour
 
                     if (cooldownComponent.CanAction())
                     {
-                        //añadir a la lista de acciones
+                        //aï¿½adir a la lista de acciones
                         playerManager.AddAction("mira a " + currentVisualObject.getName());
                         //hacer el zoom de la camara
 
