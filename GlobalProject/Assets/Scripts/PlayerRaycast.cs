@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerRaycast : MonoBehaviour
 
     //camara
     Camera cam;
+
+    [SerializeField] private CinemachineVirtualCamera camPlayer;
 
     //variables para lanzar rayos
     Ray ray;
@@ -24,11 +27,11 @@ public class PlayerRaycast : MonoBehaviour
     [SerializeField]
     private float maxDistanceVisualObject;
 
-    [SerializeField] private int initialView = 60;
+    [SerializeField] private float initialView = 60;
 
-    [SerializeField] private int minZoomView = 30;
+    [SerializeField] private float minZoomView = 30;
 
-    [SerializeField] private int zoomSpeed = 3;
+    [SerializeField] private float zoomSpeed = 1;
 
     private bool zoomState = false;
 
@@ -101,14 +104,7 @@ public class PlayerRaycast : MonoBehaviour
 
             zoomState = true;
 
-            //si hemos dado a un objeto visual
-            if (currentVisualObject != null)
-            {
-                //añadir a la lista de acciones
-                playerManager.AddAction("mira a " + currentVisualObject.getName());
-                //hacer el zoom de la camara
-                CameraZoom();
-            }
+            
         }
         else
         {
@@ -127,16 +123,12 @@ public class PlayerRaycast : MonoBehaviour
 
     }
 
-    //funcion que hace el zoom de la camara
-    void CameraZoom()
-    {
-
-    }
 
 
     void Start()
     {
         cam = Camera.main;
+
         playerManager = GetComponent<PlayerManager>();
     }
 
@@ -146,22 +138,55 @@ public class PlayerRaycast : MonoBehaviour
         //Debug.Log(actionsList[actionsList.Count - 1]);
 
 
+        
+
+    }
+
+    private void LateUpdate()
+    {
+
         if (zoomState)
         {
-            if(cam.fieldOfView > minZoomView)
+
+            if (camPlayer.m_Lens.FieldOfView > minZoomView)
             {
-                cam.fieldOfView -= zoomSpeed;
+
+                camPlayer.m_Lens.FieldOfView -= zoomSpeed;
+
             }
-            
+            else
+            {
+
+                camPlayer.m_Lens.FieldOfView = minZoomView;
+
+                //si hemos dado a un objeto visual
+                if (currentVisualObject != null)
+                {
+                    //añadir a la lista de acciones
+                    playerManager.AddAction("mira a " + currentVisualObject.getName());
+                    //hacer el zoom de la camara
+
+                    currentVisualObject = null;
+                }
+
+            }
+
         }
         else
         {
-            if(cam.fieldOfView < initialView)
+            if (camPlayer.m_Lens.FieldOfView < initialView)
             {
-                cam.fieldOfView += zoomSpeed;
+                camPlayer.m_Lens.FieldOfView += zoomSpeed;
             }
-            
+            else
+            {
+                camPlayer.m_Lens.FieldOfView = initialView;
+
+               
+            }
+
         }
+
 
     }
 
