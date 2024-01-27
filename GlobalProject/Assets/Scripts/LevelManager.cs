@@ -12,7 +12,16 @@ public class LevelManager : MonoBehaviour
     
     public TMP_Text text;
 
+    public List<GameObject> lights;
     
+    public void SwitchLights()
+    {
+        for(int i = 0; i < lights.Count; i++)
+        {
+            lights[i].SetActive(!lights[i].activeInHierarchy);
+        }
+    }
+
     void Awake()
     {
         currentTime = levelMaxTime;
