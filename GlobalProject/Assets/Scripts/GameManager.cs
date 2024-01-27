@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{
-
+{   
+    
     static GameManager instance;
+    static public GameManager Instance { get { return instance; } }
 
-    private int numPlayers;
-    private int actualPlayer;
+
+    private int numPlayers = 2;
+    private int actualPlayer = 0;
 
     private void Awake()
     {
@@ -38,12 +40,14 @@ public class GameManager : MonoBehaviour
     public void SetPlayeNum(string number)
     {
         numPlayers = int.Parse(number);
+        Debug.Log("Numero de players " + numPlayers);
     }
     void updateNewScene(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Tu mama");
-        actualPlayer++;
-        if (actualPlayer == numPlayers)
+        
+        Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
+        ++actualPlayer;
+        if (actualPlayer > numPlayers && scene.name != "EndScene")
         {
             SceneManager.LoadScene("EndScene");
         }
