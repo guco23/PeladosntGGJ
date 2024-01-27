@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class SamPlayer : MonoBehaviour
 {
-    [SerializeField]
     Camera cam;
 
     Ray ray;
     RaycastHit hit;
 
+    InteractiveObject currentItObject = null;
+    VisualObject currentVisualObject = null;
+
+
+
     [SerializeField]
-    private float maxDistance;
+    private float maxDistanceItObject;
+    [SerializeField]
+    private float maxDistanceVisualObject;
 
     private void DetectObject()
     {
@@ -19,29 +25,41 @@ public class SamPlayer : MonoBehaviour
         ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
 
 
-        if (Physics.Raycast(ray, out hit,maxDistance))
-            print("I'm looking at " + hit.transform.name);
-        else
-            print("I'm looking at nothing!");
-        //print(hit); 
+        if (Physics.Raycast(ray, out hit, maxDistanceItObject)){
+            currentItObject = hit.collider.GetComponent<InteractiveObject>();
+        }
+        else{
+            currentItObject = null;
+        }
+
+
+
+        if (Physics.Raycast(ray, out hit, maxDistanceVisualObject)){
+            currentVisualObject = hit.collider.GetComponent<VisualObject>();
+        }
+        else{
+            currentVisualObject = null;
+        }
+
 
     }
 
 
     void Start()
     {
-        //cam = Camera.main;
+        cam = Camera.main;
     }
 
     private void Update()
     {
+        Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
+        DetectObject();
     }
 
     private void LateUpdate()
-    {
-        Debug.DrawRay(ray.origin, ray.direction * maxDistance, Color.yellow);
-        DetectObject();
-    }
+    { }
+
+    
 
 
 }
