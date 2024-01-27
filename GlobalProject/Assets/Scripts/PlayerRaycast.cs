@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerRaycast : MonoBehaviour
 
     //camara
     Camera cam;
+
+    [SerializeField] private CinemachineVirtualCamera camPlayer;
 
     //variables para lanzar rayos
     Ray ray;
@@ -24,11 +27,11 @@ public class PlayerRaycast : MonoBehaviour
     [SerializeField]
     private float maxDistanceVisualObject;
 
-    [SerializeField] private int initialView = 60;
+    [SerializeField] private float initialView = 60;
 
-    [SerializeField] private int minZoomView = 30;
+    [SerializeField] private float minZoomView = 30;
 
-    [SerializeField] private int zoomSpeed = 3;
+    [SerializeField] private float zoomSpeed = 1;
 
     private bool zoomState = false;
 
@@ -116,6 +119,7 @@ public class PlayerRaycast : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+
         playerManager = GetComponent<PlayerManager>();
     }
 
@@ -125,22 +129,44 @@ public class PlayerRaycast : MonoBehaviour
         //Debug.Log(actionsList[actionsList.Count - 1]);
 
 
+        
+
+    }
+
+    private void LateUpdate()
+    {
+
         if (zoomState)
         {
-            if(cam.fieldOfView > minZoomView)
+
+            if (cam.fieldOfView > minZoomView)
             {
-                cam.fieldOfView -= zoomSpeed;
+
+                camPlayer.m_Lens.FieldOfView -= zoomSpeed;
+
+                Debug.Log(cam.fieldOfView);
             }
-            
+            else
+            {
+
+                camPlayer.m_Lens.FieldOfView = minZoomView;
+
+            }
+
         }
         else
         {
-            if(cam.fieldOfView < initialView)
+            if (cam.fieldOfView < initialView)
             {
-                cam.fieldOfView += zoomSpeed;
+                camPlayer.m_Lens.FieldOfView += zoomSpeed;
             }
-            
+            else
+            {
+                camPlayer.m_Lens.FieldOfView = initialView;
+            }
+
         }
+
 
     }
 
