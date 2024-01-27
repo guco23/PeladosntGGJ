@@ -74,7 +74,7 @@ public class PlayerRaycast : MonoBehaviour
                         actionObject.Action();
 
                         //cambiar el nombre de la frase por frase personalizada?
-                        playerManager.AddAction("interactuas con " + currentItObject.getName());
+                        playerManager.AddAction("accionar_N_" + currentItObject.getName());
 
                         cooldownComponent.ResetCooldown();
                     }
@@ -85,7 +85,7 @@ public class PlayerRaycast : MonoBehaviour
 
                     if(pickeableObject != null)
                     {                     
-                        playerManager.AddAction("coges el objeto " + currentItObject.getName());
+                        playerManager.AddAction("coger_N_" + currentItObject.getName());
 
 
                         playerManager.AddItem(currentItObject.getName());
@@ -204,7 +204,7 @@ public class PlayerRaycast : MonoBehaviour
                     if (cooldownComponent.CanAction())
                     {
                         //a�adir a la lista de acciones
-                        playerManager.AddAction("mira a " + currentVisualObject.getName());
+                        playerManager.AddAction("mirar_N_" + currentVisualObject.getName());
                         //hacer el zoom de la camara
 
                         currentVisualObject = null;

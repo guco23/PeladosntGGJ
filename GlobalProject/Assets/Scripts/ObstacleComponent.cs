@@ -5,6 +5,7 @@ using UnityEngine;
 
 //El probable que no funciona bien xd
 //Parte de la máquina de estados me la he pasado por el papo y es probable que esté un poco roto
+[RequireComponent(typeof(CooldownComponent))]
 public class ObstacleComponent : MonoBehaviour
 {
     [SerializeField]
@@ -16,6 +17,10 @@ public class ObstacleComponent : MonoBehaviour
     GameObject enter2;
 
     CooldownComponent cooldown;
+    
+    [SerializeField]
+    [Tooltip("True saltando, false agachando")]
+    private bool saltando;
 
     private void Start()
     {
@@ -53,7 +58,16 @@ public class ObstacleComponent : MonoBehaviour
 
                 if (cooldown.CanAction())
                 {
-                    player.GetComponent<PlayerManager>().AddAction("supera el objeto " + obstacleTag);
+
+                    if (saltando)
+                    {
+                        player.GetComponent<PlayerManager>().AddAction("saltar_O_" + obstacleTag);
+
+                    }
+                    else
+                    {
+                        player.GetComponent<PlayerManager>().AddAction("agachar_O_" + obstacleTag);
+                    }
 
                     cooldown.ResetCooldown();
                 }
