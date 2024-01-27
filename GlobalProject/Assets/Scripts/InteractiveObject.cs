@@ -17,7 +17,9 @@ public class InteractiveObject : MonoBehaviour
 
     }
 
-    public void SetColor(bool selected) { 
+    public void SetColor(bool selected) {
+
+        if (borderMesh == null) return;
         if(selected)
         {
             borderMesh.material.color = Color.yellow;
