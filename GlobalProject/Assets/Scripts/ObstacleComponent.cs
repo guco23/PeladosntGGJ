@@ -15,8 +15,11 @@ public class ObstacleComponent : MonoBehaviour
     GameObject enter1;
     GameObject enter2;
 
+    CooldownComponent cooldown;
+
     private void Start()
     {
+        cooldown = GetComponent<CooldownComponent>();
         enter1 = null;
         enter2 = null;
     }
@@ -39,7 +42,7 @@ public class ObstacleComponent : MonoBehaviour
         }
     }
 
-    internal void notifyExit(GameObject o, bool isMiddle)
+    internal void notifyExit(GameObject o, bool isMiddle,Collider player)
     {
         //Cuando se sale del middle
         if (isMiddle)
@@ -47,6 +50,15 @@ public class ObstacleComponent : MonoBehaviour
             //Caso de que sales por el otro trigger
             if(enter2 != null && enter2 != enter1) {
                 //OBSTUCALO SUPERADO! aqui hay que poner la llamada a lo que sea
+
+                if (cooldown.CanAction())
+                {
+                    player.GetComponent<PlayerManager>().AddAction("supera el objeto " + obstacleTag);
+
+                    cooldown.ResetCooldown();
+                }
+                
+
                 enter1 = null;
             }
             /*Está el caso de si vuelve a pasar antes de salir de enter2 pero nos da igual

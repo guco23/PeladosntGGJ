@@ -32,7 +32,7 @@ public class ObstacleTriggerComponent : MonoBehaviour
         PlayerPlaceComponent playerPlaceComponent = other.GetComponent<PlayerPlaceComponent>();
         if (playerPlaceComponent != null)
         {
-            obstacleComponent.notifyExit(gameObject, isMiddle);
+            obstacleComponent.notifyExit(gameObject, isMiddle,other);
         }
     }
 }

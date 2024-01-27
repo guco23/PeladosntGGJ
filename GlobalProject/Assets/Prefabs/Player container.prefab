@@ -187,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2592243817126348279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.733521, y: -6.3398314, z: 10.974217}
+  m_LocalPosition: {x: -1.75, y: -6.3398314, z: 5.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b3fbb2a942cc94c8633b73a5dcfaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camPlayer: {fileID: 2592243817164623143}
   maxDistanceItObject: 100
   maxDistanceVisualObject: 100
   initialView: 60
@@ -542,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2592243817164623160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.733521, y: -6.3398314, z: 10.974217}
+  m_LocalPosition: {x: -1.75, y: -6.3398314, z: 5.420001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

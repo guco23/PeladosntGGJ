@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     PlayerRaycast playerRaycast;
     PlayerPlaceComponent playerPlaceComponent;
 
+    CooldownComponent cooldownComponent;
     //SERIALIZADAS PARA DEBUG
 
     //lista de las acciones que se han ido haciendo
@@ -44,10 +45,17 @@ public class PlayerManager : MonoBehaviour
         if (context.performed)
         {
             string place = playerPlaceComponent.getCurrentPlace();
-            print(place);
+            //print(place);
             if (place != "")
             {
-                AddAction("salta en " + place);
+                cooldownComponent = playerPlaceComponent.getCurrentPlaceComponent().GetComponent<CooldownComponent>();  
+                
+                if(cooldownComponent != null && cooldownComponent.CanAction())
+                {
+                    AddAction("salta en " + place);
+
+                    cooldownComponent.ResetCooldown();
+                }
             }
         }
     }
@@ -59,7 +67,14 @@ public class PlayerManager : MonoBehaviour
             string place = playerPlaceComponent.getCurrentPlace();
             if (place != "")
             {
-                AddAction("agachate en " + place);
+                cooldownComponent = playerPlaceComponent.getCurrentPlaceComponent().GetComponent<CooldownComponent>();
+
+                if(cooldownComponent != null && cooldownComponent.CanAction())
+                {
+                    AddAction("agachate en " + place);
+                    cooldownComponent.ResetCooldown();
+                }
+
             }
         }
     }
