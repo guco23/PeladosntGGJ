@@ -57,7 +57,7 @@ public class PlayerManager : MonoBehaviour
                 
                 if(cooldownComponent != null && cooldownComponent.CanAction())
                 {
-                    AddAction("salta en " + place);
+                    AddAction("saltar_L_" + place);
 
                     cooldownComponent.ResetCooldown();
                 }
@@ -76,7 +76,7 @@ public class PlayerManager : MonoBehaviour
 
                 if(cooldownComponent != null && cooldownComponent.CanAction())
                 {
-                    AddAction("agachate en " + place);
+                    AddAction("agachar_L_" + place);
                     cooldownComponent.ResetCooldown();
                 }
 
@@ -114,8 +114,8 @@ public class PlayerManager : MonoBehaviour
     {
         List<string> lista = new List<string>();
 
-        lista.Add("agachate en tu vieja");
-        lista.Add("salta en tu vieja");
+        lista.Add("agachar_L_tu vieja");
+        lista.Add("saltar_L_tu vieja");
 
         AddOrders(lista);
 
