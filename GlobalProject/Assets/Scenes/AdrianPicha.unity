@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517871906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.21, z: 14.85}
+  m_LocalPosition: {x: -3.5, y: 8.56, z: 14.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -521,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374033391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.21, z: 14.85}
+  m_LocalPosition: {x: -3.5, y: 8.56, z: 14.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -640,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471028512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 2.21, z: 14.85}
+  m_LocalPosition: {x: -3.5, y: 8.56, z: 14.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -703,7 +703,19 @@ MonoBehaviour:
     m_ActionId: 5707414e-b3cf-4e92-8b5f-b98f2a89a026
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1471028520}
+        m_TargetAssemblyTypeName: PlayerMovementAPH, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8e93bbd1-b69c-4d93-b2bd-16d3c323b52a
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
@@ -714,6 +726,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: da2c4f31-0182-405d-935c-788712a4b788
     m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c5dc892b-44b0-4615-8aca-c6b8e7a3fb96
+    m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4cc3aaef-ce97-4fb0-96e2-607238fa285d
+    m_ActionName: Player/Zoom[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -750,6 +770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpForce: 30
+  gravity: 9.8
 --- !u!1001 &1708384225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -804,6 +826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8d13e554bbd38e144b17cfabf1247a62, type: 3}
       propertyPath: m_Name
       value: ScenaryAlfa1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8d13e554bbd38e144b17cfabf1247a62, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d13e554bbd38e144b17cfabf1247a62, type: 3}
