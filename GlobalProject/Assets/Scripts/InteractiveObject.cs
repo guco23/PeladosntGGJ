@@ -8,6 +8,7 @@ public class InteractiveObject : MonoBehaviour
     private string objectName;
 
     [SerializeField]
+    [Tooltip("Malla a la que se le aplica el reborde")]
     private MeshRenderer borderMesh;
   
     public string getName() { return objectName; }
