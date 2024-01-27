@@ -7,11 +7,6 @@ public class InteractiveObject : MonoBehaviour
     [SerializeField]
     private string objectName;
   
-    public virtual void Action()
-    {
-
-    }
-
     public string getName() { return objectName; }
 }
 

@@ -49,10 +49,31 @@ public class PlayerRaycast : MonoBehaviour
             if (currentItObject != null)
             {
                 //accion del interactuable
-                currentItObject.Action();
 
-                //añadir accion a la lista(cooldown si hace falta)
-                playerManager.AddAction("interactuas con " + currentItObject.getName());
+                //si el objeto es pickeable
+                //currentItObject.Action();
+                ActionObject actionObject;
+                PickeableObject pickeableObject;
+
+                actionObject = currentItObject.GetComponent<ActionObject>();
+
+                if(actionObject != null)
+                {
+                    actionObject.Action();
+
+                    //cambiar el nombre de la frase por frase personalizada?
+                    playerManager.AddAction("interactuas con " + currentItObject.getName());
+                }
+                else
+                {
+                    pickeableObject = currentItObject.GetComponent<PickeableObject>();
+
+                    if(pickeableObject != null)
+                    {
+                        playerManager.AddItem(currentItObject.getName());
+                        pickeableObject.Pick();
+                    }
+                }            
             }
 
         }
