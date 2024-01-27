@@ -172,6 +172,10 @@ public class PlayerRaycast : MonoBehaviour
                 lastItObject?.SetColor(false);
             }
         }
+        else
+        {
+            lastItObject?.SetColor(false);
+        }
     }
 
     private void LateUpdate()
