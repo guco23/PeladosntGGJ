@@ -24,6 +24,7 @@ public class PlayerRaycast : MonoBehaviour
     //objetos actuales(interactivo y visual)
     InteractiveObject currentItObject = null;
     VisualObject currentVisualObject = null;
+    InteractiveObject lastItObject = null;
 
     //distancias de cada rayo, serializadas
     [SerializeField]
@@ -161,11 +162,15 @@ public class PlayerRaycast : MonoBehaviour
             currentItObject = hit.collider.GetComponent<InteractiveObject>();
 
             //si hemos dado a un objeto interactuable
-            if (currentItObject != null)
+            if(currentItObject != null)
             {
-                Debug.Log("Resaltar "+currentItObject.name);
+                currentItObject.SetColor(true);
+                lastItObject = currentItObject;
             }
-
+            else
+            {
+                lastItObject?.SetColor(false);
+            }
         }
     }
 
