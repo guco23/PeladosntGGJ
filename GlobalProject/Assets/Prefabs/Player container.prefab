@@ -299,6 +299,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2592243817126348283}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8e93bbd1-b69c-4d93-b2bd-16d3c323b52a
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
@@ -306,6 +318,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2592243817126348272}
         m_TargetAssemblyTypeName: PlayerMovementAPH, Assembly-CSharp
         m_MethodName: Crouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2592243817126348283}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: Agacharse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -476,6 +500,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistanceItObject: 100
   maxDistanceVisualObject: 100
+  initialView: 60
+  minZoomView: 30
+  zoomSpeed: 3
 --- !u!114 &2592243817126348285
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -29,9 +29,13 @@ public class PlayerManager : MonoBehaviour
 
     public void Zoom(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.action.triggered && context.action.ReadValue<float>() > 0)
         {
             playerRaycast.Zoom();
+        }
+        else
+        {
+            playerRaycast.EndZoom();
         }
     }
 

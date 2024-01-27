@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class PlayerRaycast : MonoBehaviour
 
     //camara
     Camera cam;
+
+    [SerializeField] private CinemachineVirtualCamera camPlayer;
 
     //variables para lanzar rayos
     Ray ray;
@@ -23,6 +26,14 @@ public class PlayerRaycast : MonoBehaviour
     private float maxDistanceItObject;
     [SerializeField]
     private float maxDistanceVisualObject;
+
+    [SerializeField] private float initialView = 60;
+
+    [SerializeField] private float minZoomView = 30;
+
+    [SerializeField] private float zoomSpeed = 1;
+
+    private bool zoomState = false;
 
 
     //funcion que se llama al pulsar la tecla de interaccion
@@ -41,10 +52,31 @@ public class PlayerRaycast : MonoBehaviour
             if (currentItObject != null)
             {
                 //accion del interactuable
-                currentItObject.Action();
 
-                //añadir accion a la lista(cooldown si hace falta)
-                playerManager.AddAction("interactuas con " + currentItObject.getName());
+                //si el objeto es pickeable
+                //currentItObject.Action();
+                ActionObject actionObject;
+                PickeableObject pickeableObject;
+
+                actionObject = currentItObject.GetComponent<ActionObject>();
+
+                if(actionObject != null)
+                {
+                    actionObject.Action();
+
+                    //cambiar el nombre de la frase por frase personalizada?
+                    playerManager.AddAction("interactuas con " + currentItObject.getName());
+                }
+                else
+                {
+                    pickeableObject = currentItObject.GetComponent<PickeableObject>();
+
+                    if(pickeableObject != null)
+                    {
+                        playerManager.AddItem(currentItObject.getName());
+                        pickeableObject.Pick();
+                    }
+                }            
             }
 
         }
@@ -70,6 +102,8 @@ public class PlayerRaycast : MonoBehaviour
         {
             currentVisualObject = hit.collider.GetComponent<VisualObject>();
 
+            zoomState = true;
+
             //si hemos dado a un objeto visual
             if (currentVisualObject != null)
             {
@@ -89,6 +123,13 @@ public class PlayerRaycast : MonoBehaviour
 
     }
 
+    public void EndZoom()
+    {
+
+        zoomState = false;
+
+    }
+
     //funcion que hace el zoom de la camara
     void CameraZoom()
     {
@@ -99,6 +140,7 @@ public class PlayerRaycast : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+
         playerManager = GetComponent<PlayerManager>();
     }
 
@@ -106,6 +148,47 @@ public class PlayerRaycast : MonoBehaviour
     {
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
         //Debug.Log(actionsList[actionsList.Count - 1]);
+
+
+        
+
+    }
+
+    private void LateUpdate()
+    {
+
+        if (zoomState)
+        {
+
+            if (cam.fieldOfView > minZoomView)
+            {
+
+                camPlayer.m_Lens.FieldOfView -= zoomSpeed;
+
+                Debug.Log(cam.fieldOfView);
+            }
+            else
+            {
+
+                camPlayer.m_Lens.FieldOfView = minZoomView;
+
+            }
+
+        }
+        else
+        {
+            if (cam.fieldOfView < initialView)
+            {
+                camPlayer.m_Lens.FieldOfView += zoomSpeed;
+            }
+            else
+            {
+                camPlayer.m_Lens.FieldOfView = initialView;
+            }
+
+        }
+
+
     }
 
 

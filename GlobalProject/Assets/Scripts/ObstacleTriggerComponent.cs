@@ -23,7 +23,7 @@ public class ObstacleTriggerComponent : MonoBehaviour
         PlayerPlaceComponent playerPlaceComponent = other.GetComponent<PlayerPlaceComponent>();
         if (playerPlaceComponent != null)
         {
-            obstacleComponent.notifyEnter(isMiddle);
+            obstacleComponent.notifyEnter(gameObject, isMiddle);
         }
     }
 
@@ -32,8 +32,7 @@ public class ObstacleTriggerComponent : MonoBehaviour
         PlayerPlaceComponent playerPlaceComponent = other.GetComponent<PlayerPlaceComponent>();
         if (playerPlaceComponent != null)
         {
-            obstacleComponent.notifyExit(isMiddle);
-
+            obstacleComponent.notifyExit(gameObject, isMiddle);
         }
     }
 }
