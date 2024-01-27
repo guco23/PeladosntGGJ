@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlaceComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    [Tooltip("El tag indicador del place")]
+    string placeTag;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        PlayerPlaceComponent playerPlaceComponent = other.GetComponent<PlayerPlaceComponent>();
+        if(playerPlaceComponent != null)
+        {
+            playerPlaceComponent.enteredPlace(this.placeTag);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        PlayerPlaceComponent playerPlaceComponent = other.GetComponent<PlayerPlaceComponent>();
+        if (playerPlaceComponent != null)
+        {
+            playerPlaceComponent.exitedPlace();
+        }
     }
 }
