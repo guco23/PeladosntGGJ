@@ -9,7 +9,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float levelMaxTime = 5;
     private float currentTime;
 
-    
+    [SerializeField] private Transform mainUI;
+    [SerializeField] private Transform pauseUI;
+
     public TMP_Text text;
 
     public List<GameObject> lights;
@@ -20,6 +22,12 @@ public class LevelManager : MonoBehaviour
         {
             lights[i].SetActive(!lights[i].activeInHierarchy);
         }
+    }
+
+    public void SetPauseMenu(bool active)
+    {
+        mainUI.gameObject.SetActive(!active);
+        pauseUI.gameObject.SetActive(active);
     }
 
     void Awake()
