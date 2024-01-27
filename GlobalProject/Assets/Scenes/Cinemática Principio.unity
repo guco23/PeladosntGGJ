@@ -1576,7 +1576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5917c8c5c4ebe3b44add0a0baa61fe6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cinemachineCamera: {fileID: 1048197741}
+  menuUI: {fileID: 1383795989}
+  animator: {fileID: 1048197742}
 --- !u!1 &1604152046
 GameObject:
   m_ObjectHideFlags: 0
