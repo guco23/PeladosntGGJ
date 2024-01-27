@@ -122,7 +122,6 @@ public class PlayerMovementAPH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         move = (myDir.y * mainCamera.transform.forward + myDir.x * mainCamera.transform.right) * speed;
 
         ApplyGravity();
