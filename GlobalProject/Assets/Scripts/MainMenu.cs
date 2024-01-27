@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject menuUI;
     public Animator animator;
+    public GameObject player;
 
     void Start()
     {
         menuUI.SetActive(true);
+        //for (int i = 0; i < 6; i++) {
+        //    player.GetComponent<PlayerInput>().currentActionMap.actions[i].Disable();
+        //}
+        player.GetComponent<PlayerInput>().currentActionMap.Disable();
     }
 
     public void PlayGame()
@@ -26,6 +32,6 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        GameManager.Instance.Exit();
     }
 }
