@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             SceneManager.sceneLoaded += updateNewScene;
+            DontDestroyOnLoad(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
     // Start is called before the first frame update
     void Start()

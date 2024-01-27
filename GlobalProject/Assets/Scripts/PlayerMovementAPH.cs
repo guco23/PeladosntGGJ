@@ -103,7 +103,6 @@ public class PlayerMovementAPH : MonoBehaviour
             actualHeight = standingHeight;
         }
 
-
     }
 
 
@@ -116,6 +115,7 @@ public class PlayerMovementAPH : MonoBehaviour
         mainCamera = Camera.main;
 
         standingHeight = controller.height;
+        actualHeight = standingHeight;
 
     }
 
@@ -129,7 +129,6 @@ public class PlayerMovementAPH : MonoBehaviour
         controller.Move(move * Time.deltaTime);
 
         controller.height = actualHeight;
-
         
 
     }

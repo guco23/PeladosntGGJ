@@ -33,6 +33,10 @@ public class PlayerManager : MonoBehaviour
         {
             playerRaycast.Zoom();
         }
+        else if(context.canceled)
+        {
+            playerRaycast.EndZoom();
+        }
     }
 
     public void Jump(InputAction.CallbackContext context)

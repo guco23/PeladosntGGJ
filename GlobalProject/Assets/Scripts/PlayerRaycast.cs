@@ -24,6 +24,14 @@ public class PlayerRaycast : MonoBehaviour
     [SerializeField]
     private float maxDistanceVisualObject;
 
+    [SerializeField] private int initialView = 60;
+
+    [SerializeField] private int minZoomView = 30;
+
+    [SerializeField] private int zoomSpeed = 3;
+
+    private bool zoomState = false;
+
 
     //funcion que se llama al pulsar la tecla de interaccion
     public void InteractObject()
@@ -70,6 +78,8 @@ public class PlayerRaycast : MonoBehaviour
         {
             currentVisualObject = hit.collider.GetComponent<VisualObject>();
 
+            zoomState = true;
+
             //si hemos dado a un objeto visual
             if (currentVisualObject != null)
             {
@@ -86,6 +96,13 @@ public class PlayerRaycast : MonoBehaviour
 
         //print(currentVisualObject);
 
+
+    }
+
+    public void EndZoom()
+    {
+
+        zoomState = false;
 
     }
 
@@ -106,6 +123,25 @@ public class PlayerRaycast : MonoBehaviour
     {
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
         //Debug.Log(actionsList[actionsList.Count - 1]);
+
+
+        if (zoomState)
+        {
+            if(cam.fieldOfView > minZoomView)
+            {
+                cam.fieldOfView -= zoomSpeed;
+            }
+            
+        }
+        else
+        {
+            if(cam.fieldOfView < initialView)
+            {
+                cam.fieldOfView += zoomSpeed;
+            }
+            
+        }
+
     }
 
 
