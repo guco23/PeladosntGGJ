@@ -46,7 +46,12 @@ public class GameManager : MonoBehaviour
     {
         
         //Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
-        ++actualPlayer;
+
+        //cambiar por el nombre de la escena principal
+        if(scene.name == "levelScene")
+        {
+            ++actualPlayer;
+        }
         if (actualPlayer > numPlayers && scene.name != "EndScene")
         {
             SceneManager.LoadScene("EndScene");
