@@ -64,7 +64,9 @@ public class PlayerMovementAPH : MonoBehaviour
     void Update()
     {
 
-        Vector3 move = myDir.y * mainCamera.transform.forward + myDir.x * mainCamera.transform.right; 
+        Vector3 move = myDir.y * mainCamera.transform.forward + myDir.x * mainCamera.transform.right;
+
+        move.y = 0;
 
         Debug.Log(move);
 
