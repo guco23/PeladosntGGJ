@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class SamPlayer : MonoBehaviour
+
+public class PlayerRaycast : MonoBehaviour
 {
+    PlayerManager playerManager;
+
     //camara
     Camera cam;
 
@@ -16,17 +18,15 @@ public class SamPlayer : MonoBehaviour
     InteractiveObject currentItObject = null;
     VisualObject currentVisualObject = null;
 
-
     //distancias de cada rayo, serializadas
     [SerializeField]
     private float maxDistanceItObject;
     [SerializeField]
     private float maxDistanceVisualObject;
 
- 
 
     //funcion que se llama al pulsar la tecla de interaccion
-    public void InteractObject(InputAction.CallbackContext context)
+    public void InteractObject()
     {
         //dispara un rayo al centro de la camara
         ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
@@ -36,19 +36,20 @@ public class SamPlayer : MonoBehaviour
         if (Physics.Raycast(ray, out hit, maxDistanceItObject))
         {
             currentItObject = hit.collider.GetComponent<InteractiveObject>();
-   
+
             //si hemos dado a un objeto interactuable
-            if(currentItObject != null)
+            if (currentItObject != null)
             {
                 //accion del interactuable
-                //currentItObject.Action();
+                currentItObject.Action();
 
                 //añadir accion a la lista(cooldown si hace falta)
-                //actionsList.Add("interactuas con " + currentItObject.getName());
+                playerManager.AddAction("interactuas con " + currentItObject.getName());
             }
 
         }
-        else{//sino ha chocado con nada el rayo
+        else
+        {//sino ha chocado con nada el rayo
 
             currentItObject = null;
         }
@@ -59,7 +60,7 @@ public class SamPlayer : MonoBehaviour
     }
 
     //funcion que se llama al pulsar la tecla de zoom
-    public void Zoom(InputAction.CallbackContext context)
+    public void Zoom()
     {
         //dispara un rayo al centro de la camara
         ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
@@ -70,11 +71,10 @@ public class SamPlayer : MonoBehaviour
             currentVisualObject = hit.collider.GetComponent<VisualObject>();
 
             //si hemos dado a un objeto visual
-            if(currentVisualObject != null)
+            if (currentVisualObject != null)
             {
                 //añadir a la lista de acciones
-                //actionsList.Add("mira a " + currentVisualObject.getName());
-
+                playerManager.AddAction("mira a " + currentVisualObject.getName());
                 //hacer el zoom de la camara
                 CameraZoom();
             }
@@ -99,12 +99,16 @@ public class SamPlayer : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        playerManager = GetComponent<PlayerManager>();
     }
 
     private void Update()
     {
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
-        //Debug.Log(actionsList[actionsList.Count-1]);
+        //Debug.Log(actionsList[actionsList.Count - 1]);
     }
+
+
+
 }
 

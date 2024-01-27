@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerPlaceComponent : MonoBehaviour
 {
+
     //El tag del place en el que se encuentra, de no ser ninguno, es ""
     string currentPlace;
 
