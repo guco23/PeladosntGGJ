@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: ffacf3c2df19fe842b9d2b5206b94b44
+guid: f9580ec725815f046b55094418f61294
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -7584128107887247283
+    second: Palanca|Cube.002Action
   externalObjects: {}
   materials:
     materialImportMode: 2

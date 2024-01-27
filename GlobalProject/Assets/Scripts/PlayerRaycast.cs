@@ -2,12 +2,14 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class PlayerRaycast : MonoBehaviour
 {
     PlayerManager playerManager;
 
+    PlayerInput playerInput = null;
     //camara
     Camera cam;
 
@@ -102,16 +104,11 @@ public class PlayerRaycast : MonoBehaviour
         {
             currentVisualObject = hit.collider.GetComponent<VisualObject>();
 
-            zoomState = true;
-
-            //si hemos dado a un objeto visual
-            if (currentVisualObject != null)
+            if(currentVisualObject != null)
             {
-                //añadir a la lista de acciones
-                playerManager.AddAction("mira a " + currentVisualObject.getName());
-                //hacer el zoom de la camara
-                CameraZoom();
+                zoomState = true;
             }
+      
         }
         else
         {
@@ -125,15 +122,7 @@ public class PlayerRaycast : MonoBehaviour
 
     public void EndZoom()
     {
-
         zoomState = false;
-
-    }
-
-    //funcion que hace el zoom de la camara
-    void CameraZoom()
-    {
-
     }
 
 
@@ -141,51 +130,63 @@ public class PlayerRaycast : MonoBehaviour
     {
         cam = Camera.main;
 
+        playerInput = GetComponent<PlayerInput>();
         playerManager = GetComponent<PlayerManager>();
     }
 
     private void Update()
     {
+        //debug del rayo
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
-        //Debug.Log(actionsList[actionsList.Count - 1]);
-
-
-        
-
     }
 
     private void LateUpdate()
     {
 
+        //MAQUINA DE ESTADOS DEL ZOOM, sacar a componente?
+
+        //si estamos en el estado zoom
         if (zoomState)
         {
-
-            if (cam.fieldOfView > minZoomView)
+            
+            playerInput.currentActionMap.actions[3].Disable();
+            //mientras no haya llegado al min zoom(estar lo mas cerca posible), nos acercamo
+            if (camPlayer.m_Lens.FieldOfView > minZoomView)
             {
-
                 camPlayer.m_Lens.FieldOfView -= zoomSpeed;
-
-                Debug.Log(cam.fieldOfView);
             }
             else
             {
-
+                //seteamos el zoom al minimo
                 camPlayer.m_Lens.FieldOfView = minZoomView;
+
+                //si hemos dado a un objeto visual
+                if (currentVisualObject != null)
+                {
+                    //añadir a la lista de acciones
+                    playerManager.AddAction("mira a " + currentVisualObject.getName());
+                    //hacer el zoom de la camara
+
+                    currentVisualObject = null;
+                }
 
             }
 
         }
-        else
+        else //si no estamos en el estado zooms
         {
-            if (cam.fieldOfView < initialView)
+            //si no tenemos el zoom inicial, nos alejamos
+            if (camPlayer.m_Lens.FieldOfView < initialView)
             {
                 camPlayer.m_Lens.FieldOfView += zoomSpeed;
             }
             else
             {
+                playerInput.currentActionMap.actions[3].Enable();
+
+                //si ya tenemos el zoom inicial lo seteamos
                 camPlayer.m_Lens.FieldOfView = initialView;
             }
-
         }
 
 
