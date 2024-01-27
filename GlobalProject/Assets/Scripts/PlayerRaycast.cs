@@ -164,14 +164,12 @@ public class PlayerRaycast : MonoBehaviour
             //si hemos dado a un objeto interactuable
             if(currentItObject != null)
             {
-
                 currentItObject.SetColor(true);
                 lastItObject = currentItObject;
             }
             else
             {
                 lastItObject?.SetColor(false);
-
             }
         }
     }

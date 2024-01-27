@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //text.text = "Time: "+  string.Format("{0:00}:{1:00}", currentTime / 60, currentTime % 60);
+        text.text = "Time: "+  string.Format("{0:00}:{1:00}", currentTime / 60, currentTime % 60);
         currentTime -= Time.deltaTime;
         if(currentTime < 0)
         {
