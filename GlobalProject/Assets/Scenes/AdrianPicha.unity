@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 1471028513}
   - component: {fileID: 1471028517}
   - component: {fileID: 1471028518}
+  - component: {fileID: 1471028519}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -673,57 +674,35 @@ MonoBehaviour:
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 03232ed0-e024-47e4-850f-67f21a3840d0
-    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
+    m_ActionId: 8e93bbd1-b69c-4d93-b2bd-16d3c323b52a
+    m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: a12a1be3-9fce-4f83-90b5-fdf122935bb6
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a6010d2b-5c44-429b-bb70-007096f1baab
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 999c2bd0-5125-4a97-a6e5-dcc681829a48
-    m_ActionName: UI/Submit[/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2102fc2f-fe7c-4bc8-8e33-a94a4647b253
-    m_ActionName: UI/Cancel[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4b80a5c8-0459-414f-9b20-837264483232
-    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6d94bb35-139f-483b-a1ef-94274bf9b36e
-    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ab0c299c-5bbb-4713-91bc-35d78e18ab43
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2a951f63-851f-48eb-89ba-81017897515d
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7dd65700-4200-4391-8912-df86bb852549
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d69158b6-eab4-4f40-beee-66f007d0a666
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f54b92c2-7080-40f4-8e1d-ff71582bc0a9
-    m_ActionName: UI/TrackedDeviceOrientation
+    m_ActionId: 1a3bacfa-672d-4418-947a-8648f3e2d001
+    m_ActionName: Player/Agachar[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 517871908}
+--- !u!143 &1471028519
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471028512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1708384225
 PrefabInstance:
   m_ObjectHideFlags: 0
