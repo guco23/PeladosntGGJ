@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &72861937267166398
+--- !u!1 &4832989965507794515
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4034306299085997295}
-  - component: {fileID: 7452883659479342367}
-  - component: {fileID: 411095219565392409}
-  - component: {fileID: 877504711648136363}
-  - component: {fileID: 1231950376025343877}
-  - component: {fileID: 4929174034700538599}
+  - component: {fileID: 5767642237939402683}
+  - component: {fileID: 593881215578118301}
+  - component: {fileID: 1813102910039901840}
+  - component: {fileID: 4832989965507794527}
+  - component: {fileID: 4832989965507794512}
+  - component: {fileID: 4832989965507794513}
+  - component: {fileID: 4832989965507794514}
+  - component: {fileID: 4832989965507794526}
   m_Layer: 0
-  m_Name: Escoba
+  m_Name: Coco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4034306299085997295
+--- !u!4 &5767642237939402683
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72861937267166398}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 4.987577, y: -5.1558666, z: -3.634071}
-  m_LocalScale: {x: 20.51052, y: 20.510517, z: 20.510517}
+  m_GameObject: {fileID: 4832989965507794515}
+  m_LocalRotation: {x: 0.69261974, y: 0.30705234, z: -0.448534, w: -0.47414553}
+  m_LocalPosition: {x: 0.94, y: -3.46, z: -7.18}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6742969304871594054}
+  - {fileID: 8161054356893500642}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7452883659479342367
+--- !u!33 &593881215578118301
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72861937267166398}
-  m_Mesh: {fileID: 4181652062932033219, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
---- !u!23 &411095219565392409
+  m_GameObject: {fileID: 4832989965507794515}
+  m_Mesh: {fileID: 4611818361124008375, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
+--- !u!23 &1813102910039901840
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72861937267166398}
+  m_GameObject: {fileID: 4832989965507794515}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2907879661944117164, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
+  - {fileID: -3522955778539423533, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,46 +89,72 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &877504711648136363
+--- !u!114 &4832989965507794527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72861937267166398}
+  m_GameObject: {fileID: 4832989965507794515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70edad72a45ebc948ba05a0aed411a3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: escoba
-  borderMesh: {fileID: 7060608758908904567}
---- !u!114 &1231950376025343877
+  cooldownTime: 3
+--- !u!114 &4832989965507794512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72861937267166398}
+  m_GameObject: {fileID: 4832989965507794515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c1586c287a84b4d8d0dfabd8afd55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: coco
+--- !u!114 &4832989965507794513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832989965507794515}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da538474815e42744a3cb39707811ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &4929174034700538599
+--- !u!114 &4832989965507794514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832989965507794515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70edad72a45ebc948ba05a0aed411a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: coco
+  borderMesh: {fileID: 4547107457047675169}
+--- !u!65 &4832989965507794526
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72861937267166398}
+  m_GameObject: {fileID: 4832989965507794515}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.014786811, y: 0.01153156, z: 0.09015698}
-  m_Center: {x: 0.000366122, y: -0.0003156382, z: 0.045973424}
---- !u!1 &871168141521647374
+  m_Size: {x: 0.0017534642, y: 0.001753464, z: 0.002210751}
+  m_Center: {x: -7.0187917e-10, y: 7.742213e-12, z: 0.00012989278}
+--- !u!1 &7719616245813455040
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,46 +162,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6742969304871594054}
-  - component: {fileID: 2033235557449388433}
-  - component: {fileID: 7060608758908904567}
+  - component: {fileID: 8161054356893500642}
+  - component: {fileID: 1874817409799996109}
+  - component: {fileID: 4547107457047675169}
   m_Layer: 0
-  m_Name: Reborde Escoba
+  m_Name: Reborde Coco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6742969304871594054
+--- !u!4 &8161054356893500642
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871168141521647374}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 7719616245813455040}
+  m_LocalRotation: {x: -0.0000000037252903, y: 1.7763568e-15, z: -0.000000014901163, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4034306299085997295}
+  m_Father: {fileID: 5767642237939402683}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2033235557449388433
+--- !u!33 &1874817409799996109
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871168141521647374}
-  m_Mesh: {fileID: -4072903078005780911, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
---- !u!23 &7060608758908904567
+  m_GameObject: {fileID: 7719616245813455040}
+  m_Mesh: {fileID: -9101378719316994630, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
+--- !u!23 &4547107457047675169
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871168141521647374}
+  m_GameObject: {fileID: 7719616245813455040}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -187,7 +215,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8076857686274857822, guid: 4f2e5c38c03d086478201b64c1e4ebb0, type: 3}
+  - {fileID: -8076857686274857822, guid: 41d6a2cfa4d5ce6428929f28d2b79b9a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
