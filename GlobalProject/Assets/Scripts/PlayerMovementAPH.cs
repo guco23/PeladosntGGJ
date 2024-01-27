@@ -1,9 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovementAPH : MonoBehaviour
 {
+
+    #region parameters
+
+
+    [SerializeField] private float speed;
+
+
+    #endregion
+
+
+    #region references
+
+
+
+
+    #endregion
 
 
     #region properties
@@ -11,20 +29,34 @@ public class PlayerMovementAPH : MonoBehaviour
 
     private CharacterController controller;
 
+    private Vector2 myDir;
+
     private int dirX = 0;
 
     private int dirY = 0;
+
+    private Camera mainCamera;
 
 
     #endregion
 
 
 
+    public void DirMovement(InputAction.CallbackContext context)
+    {
+
+        myDir = context.ReadValue<Vector2>();
+
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
         
-        controller.GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
+
+        mainCamera = Camera.main;
 
     }
 
@@ -32,9 +64,13 @@ public class PlayerMovementAPH : MonoBehaviour
     void Update()
     {
 
-        
+        Vector3 move = myDir.y * mainCamera.transform.forward + myDir.x * mainCamera.transform.right;
 
+        move.y = 0;
 
+        Debug.Log(move);
+
+        controller.Move(move * Time.deltaTime * speed);
         
     }
 }

@@ -7,6 +7,7 @@ public class VisualObject : MonoBehaviour
     [SerializeField]
     private string objectName;
 
-
+    public string getName() { return objectName; }
+    
 }
 

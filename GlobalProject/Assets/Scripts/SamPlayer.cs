@@ -13,20 +13,13 @@ public class SamPlayer : MonoBehaviour
     InteractiveObject currentItObject = null;
     VisualObject currentVisualObject = null;
 
-
-
     [SerializeField]
     private float maxDistanceItObject;
     [SerializeField]
     private float maxDistanceVisualObject;
 
-    private void DetectObject()
-    {
-        
 
-
-
-    }
+    List<string> actionsList = new List<string>();
 
     public void InteractObject(InputAction.CallbackContext context)
     {
@@ -37,13 +30,22 @@ public class SamPlayer : MonoBehaviour
         if (Physics.Raycast(ray, out hit, maxDistanceItObject))
         {
             currentItObject = hit.collider.GetComponent<InteractiveObject>();
+
+            //accion del interactuable
+            //currentItObject.Action();
+
+            //añadir accion a la lista(cooldown si hace falta)
+
+            actionsList.Add("interactuas con " + currentItObject.getName());
+
         }
         else
         {
             currentItObject = null;
         }
 
-        print(currentItObject); 
+        //print(currentItObject); 
+
 
     }
 
@@ -61,7 +63,10 @@ public class SamPlayer : MonoBehaviour
             currentVisualObject = null;
         }
 
-        print(currentVisualObject);
+        //print(currentVisualObject);
+
+        actionsList.Add("mira a " + currentVisualObject.getName());
+
     }
 
 
@@ -74,7 +79,7 @@ public class SamPlayer : MonoBehaviour
     private void Update()
     {
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
-        //DetectObject();
+        //Debug.Log(actionsList[actionsList.Count-1]);
     }
 }
 
