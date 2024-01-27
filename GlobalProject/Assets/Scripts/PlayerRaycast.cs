@@ -151,6 +151,22 @@ public class PlayerRaycast : MonoBehaviour
     {
         //debug del rayo
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
+        //dispara un rayo al centro de la camara
+        ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+
+
+        //si el rayo ha colisonado 
+        if (Physics.Raycast(ray, out hit, maxDistanceItObject))
+        {
+            currentItObject = hit.collider.GetComponent<InteractiveObject>();
+
+            //si hemos dado a un objeto interactuable
+            if (currentItObject != null)
+            {
+                Debug.Log("Resaltar "+currentItObject.name);
+            }
+
+        }
     }
 
     private void LateUpdate()
