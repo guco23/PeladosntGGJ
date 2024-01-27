@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SamPlayer : MonoBehaviour
 {
@@ -21,28 +22,48 @@ public class SamPlayer : MonoBehaviour
 
     private void DetectObject()
     {
+        
+
+
+
+    }
+
+    public void InteractObject(InputAction.CallbackContext context)
+    {
         //dispara un rayo al centro de la camara
         ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
 
 
-        if (Physics.Raycast(ray, out hit, maxDistanceItObject)){
+        if (Physics.Raycast(ray, out hit, maxDistanceItObject))
+        {
             currentItObject = hit.collider.GetComponent<InteractiveObject>();
         }
-        else{
+        else
+        {
             currentItObject = null;
         }
 
+        print(currentItObject); 
 
+    }
 
-        if (Physics.Raycast(ray, out hit, maxDistanceVisualObject)){
+    public void Zoom(InputAction.CallbackContext context)
+    {
+        //dispara un rayo al centro de la camara
+        ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+
+        if (Physics.Raycast(ray, out hit, maxDistanceVisualObject))
+        {
             currentVisualObject = hit.collider.GetComponent<VisualObject>();
         }
-        else{
+        else
+        {
             currentVisualObject = null;
         }
 
-
+        print(currentVisualObject);
     }
+
 
 
     void Start()
@@ -53,14 +74,7 @@ public class SamPlayer : MonoBehaviour
     private void Update()
     {
         Debug.DrawRay(ray.origin, ray.direction * maxDistanceItObject, Color.yellow);
-        DetectObject();
+        //DetectObject();
     }
-
-    private void LateUpdate()
-    { }
-
-    
-
-
 }
 

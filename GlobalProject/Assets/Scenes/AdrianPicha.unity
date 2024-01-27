@@ -467,6 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374033393}
   - component: {fileID: 1374033392}
+  - component: {fileID: 1374033394}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -528,6 +529,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1374033394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374033391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerIndex: -1
+  AutoEnableInputs: 1
+  XYAxis: {fileID: 9029827292215189296, guid: 63cfc5a1fc47e944ebba55ebb092efe8, type: 3}
+  ZAxis: {fileID: 0}
 --- !u!1 &1471028512
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,8 +658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd6e0154e1c49f489a5c61fe433f13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 517871908}
-  maxDistance: 100000
+  maxDistanceItObject: 0
+  maxDistanceVisualObject: 0
 --- !u!114 &1471028518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,6 +697,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1a3bacfa-672d-4418-947a-8648f3e2d001
     m_ActionName: Player/Agachar[/Keyboard/leftShift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: da2c4f31-0182-405d-935c-788712a4b788
+    m_ActionName: Player/Look
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
