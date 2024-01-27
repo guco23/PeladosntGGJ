@@ -2,8 +2,10 @@ using Palmmedia.ReportGenerator.Core.Parser.Filtering;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static System.Collections.Specialized.BitVector32;
 
 public class PlayerMovementAPH : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class PlayerMovementAPH : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    [SerializeField] private float crouchHeight = 1f;
 
     #endregion
 
@@ -37,7 +40,9 @@ public class PlayerMovementAPH : MonoBehaviour
 
     private Vector3 move;
 
+    private float standingHeight;
 
+    private float actualHeight;
 
     #endregion
 
@@ -70,13 +75,32 @@ public class PlayerMovementAPH : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log(controller.isGrounded);
 
         if (controller.isGrounded && context.started)
         {
 
             actualVelocity = jumpForce;
 
+        }
+
+
+    }
+
+    public void Crouch(InputAction.CallbackContext context)
+    {
+        Debug.Log("Crouch");
+
+        if (context.action.triggered && context.action.ReadValue<float>() > 0)
+        {
+            Debug.Log("Down");
+            actualHeight = crouchHeight;
+
+        }
+        else
+        {
+            Debug.Log("Up");
+
+            actualHeight = standingHeight;
         }
 
 
@@ -91,6 +115,8 @@ public class PlayerMovementAPH : MonoBehaviour
 
         mainCamera = Camera.main;
 
+        standingHeight = controller.height;
+
     }
 
     // Update is called once per frame
@@ -103,7 +129,7 @@ public class PlayerMovementAPH : MonoBehaviour
 
         controller.Move(move * Time.deltaTime);
 
-        
+        controller.height = actualHeight;
 
         
 

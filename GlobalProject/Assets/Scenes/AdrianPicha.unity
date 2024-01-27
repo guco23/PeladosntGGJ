@@ -659,8 +659,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd6e0154e1c49f489a5c61fe433f13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  currentItObject: {fileID: 0}
+  currentVisualObject: {fileID: 0}
   maxDistanceItObject: 0
   maxDistanceVisualObject: 0
+  actionsList: []
 --- !u!114 &1471028518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,7 +723,19 @@ MonoBehaviour:
     m_ActionId: 8e93bbd1-b69c-4d93-b2bd-16d3c323b52a
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1471028520}
+        m_TargetAssemblyTypeName: PlayerMovementAPH, Assembly-CSharp
+        m_MethodName: Crouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1a3bacfa-672d-4418-947a-8648f3e2d001
     m_ActionName: Player/Agachar[/Keyboard/leftShift]
   - m_PersistentCalls:
@@ -734,6 +750,46 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4cc3aaef-ce97-4fb0-96e2-607238fa285d
     m_ActionName: Player/Zoom[/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 521dbf99-17e0-4634-8541-76de7b3f3b03
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 04935dd8-5810-47fa-9020-4974c6305f63
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6398a505-e866-4cf2-874c-4338a3eecf91
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 207174f0-cc08-4034-a41c-b7cc6f4caae7
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ed374763-775c-4681-a37f-40002825815c
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ca248590-0ced-4263-b30f-4c85b716dae0
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4fb9c6bb-0525-4813-98d6-bc58e69ddde1
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0105cb95-6809-478b-96e0-bb5115d3db97
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 229f3225-b909-4d10-957d-791da3fd5bb4
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 456cd88e-a27c-44fc-adb1-95b6e1138c98
+    m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -770,8 +826,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 30
-  gravity: 9.8
+  jumpForce: 3
+  gravity: 6
+  crouchHeight: 0.5
 --- !u!1001 &1708384225
 PrefabInstance:
   m_ObjectHideFlags: 0
