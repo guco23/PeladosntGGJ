@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Tu Vieja");
+        //Debug.Log("Tu Vieja");
     }
 
     // Update is called once per frame
@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour
     public void SetPlayeNum(string number)
     {
         numPlayers = int.Parse(number);
-        Debug.Log("Numero de players " + numPlayers);
+        //Debug.Log("Numero de players " + numPlayers);
     }
     void updateNewScene(Scene scene, LoadSceneMode mode)
     {
         
-        Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
+        //Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
         ++actualPlayer;
         if (actualPlayer > numPlayers && scene.name != "EndScene")
         {

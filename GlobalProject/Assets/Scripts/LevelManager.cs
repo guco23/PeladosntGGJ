@@ -7,10 +7,14 @@ public class LevelManager : MonoBehaviour
     [Tooltip("Time in seconds")]
     [SerializeField] private float levelMaxTime = 5;
     private float currentTime;
+    void Awake()
+    {
+        currentTime = levelMaxTime;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = levelMaxTime;
+
     }
 
     // Update is called once per frame
