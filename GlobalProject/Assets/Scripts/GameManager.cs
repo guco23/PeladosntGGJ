@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public List<string> ordenesList;
 
+    public int NumOrdenes = 2;
 
     private int numPlayers = 2;
     private int actualPlayer = 0;
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
+        NumOrdenes++;
         updateOrdersList(PlayerManager.instance.SelectNextOrders());
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
