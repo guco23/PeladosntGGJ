@@ -81,7 +81,7 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < obstaclesOrder.Length; i++)
         {
 
-            Instantiate(obstaclesSpawnPoints[obstaclesOrder[i]], obstaclesSpawnPoints[i].position, Quaternion.identity);
+            Instantiate(obstaclesPrefabs[obstaclesOrder[i]], obstaclesSpawnPoints[i].position, Quaternion.identity);
 
         }
 
