@@ -6,22 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Cinem\xE1tica Principio.unity"
+    guid: 0572b2bd31f69754a94aeba8a2ae1c29
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 46fd5f743df2f6c4eb36b31186ed7193
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 3246d0f8e7caec941984c067ade1263d
-  - enabled: 1
-    path: Assets/Scenes/Samuel 3.unity
-    guid: 5ebe99b24bfdfda428859516f3bec624
-  - enabled: 1
-    path: Assets/Scenes/Samuel 2.unity
-    guid: 111a4d28da713914e9023e24f0cab1fb
-  - enabled: 1
-    path: Assets/Scenes/Samuel 4.unity
-    guid: 145c768a2e2e3c44e83750bb5514cc13
-  - enabled: 1
-    path: "Assets/Scenes/Cinem\xE1tica Principio.unity"
-    guid: 0572b2bd31f69754a94aeba8a2ae1c29
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b2bbdb2e2304b06469fef29dbad4f95c, type: 2}
