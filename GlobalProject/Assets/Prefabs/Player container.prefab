@@ -490,7 +490,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cde36804f0a78f448ca1f366d3d4762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
   audioClips: {fileID: 3125525112917050337}
+  timeTolevel: 40
+  maxActions: 10
+  keepOriginalPercentage: 95
+  numberOfActions: 3
+  listaTotalAcciones:
+  - accionar_N_luces
+  - accionar_N_polea
+  - agachar_L_palacio
+  - agachar_L_perchero
+  - agachar_O_arco
+  - agachar_O_camello
+  - agachar_O_mesa
+  - coger_N_coco
+  - coger_N_escoba
+  - coger_N_lampara
+  - coger_N_mono
+  - coger_N_sable
+  - coger_N_tesoro
+  - mirar_N_agua
+  - mirar_N_alfombra
+  - mirar_N_caja
+  - mirar_N_camello
+  - mirar_N_coco
+  - mirar_N_foco
+  - mirar_N_mercado
+  - mirar_N_palmera
+  - mirar_N_publico
+  - saltar_L_agua
+  - saltar_L_alfombra
+  - saltar_L_mercadillo
+  - saltar_L_palmera
+  - saltar_L_perchero
+  - saltar_O_caja
   actionsList: []
   itemsList: []
 --- !u!114 &2592243817126348284
