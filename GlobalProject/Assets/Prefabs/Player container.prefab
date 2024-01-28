@@ -419,6 +419,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 456cd88e-a27c-44fc-adb1-95b6e1138c98
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7b47dcc4-56e7-41bb-adf5-8a2e438b3552
+    m_ActionName: Player/PauseGame[/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -486,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cde36804f0a78f448ca1f366d3d4762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: {fileID: 0}
+  audioClips: {fileID: 3125525112917050337}
   actionsList: []
   itemsList: []
 --- !u!114 &2592243817126348284
