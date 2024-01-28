@@ -31,7 +31,13 @@ public class GameManager : MonoBehaviour
             SceneManager.sceneLoaded += updateNewScene;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(this);
+        }
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -124,9 +130,10 @@ public class GameManager : MonoBehaviour
         while(list.Count < NumOrdenes)
         {
             int aux = Random.Range(0, audioClipList.Count);
-
-            ordersList.Add(audioClipList[aux].name);
+            Debug.Log(audioClipList[aux]);
+            list.Add(audioClipList[aux].name);
         }
+        Debug.Log(list);
     }
     public AudioClip GetOrderClip(string name)
     {
