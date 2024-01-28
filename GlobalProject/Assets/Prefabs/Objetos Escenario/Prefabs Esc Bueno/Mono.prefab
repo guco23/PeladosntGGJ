@@ -43,6 +43,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mono
       objectReference: {fileID: 0}
+    - target: {fileID: 2399672380243990103, guid: f7a05fbe817a5de4bb6c8830f0232dba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399672380243990103, guid: f7a05fbe817a5de4bb6c8830f0232dba, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399672380243990103, guid: f7a05fbe817a5de4bb6c8830f0232dba, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399672380243990103, guid: f7a05fbe817a5de4bb6c8830f0232dba, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3318737496502017811, guid: f7a05fbe817a5de4bb6c8830f0232dba, type: 3}
       propertyPath: m_RootOrder
       value: 0
