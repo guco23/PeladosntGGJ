@@ -178,8 +178,11 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-
-    public void SelectNextOrders()
+    private void OnDestroy()
+    {
+        GameManager.Instance.updateOrdersList(SelectNextOrders());
+    }
+    public List<string> SelectNextOrders()
     {
         float actualTime = levelManager.getLevelMaxTime() -levelManager.getLevelCurrentTime();
 
@@ -241,6 +244,8 @@ public class PlayerManager : MonoBehaviour
                 break;
             }
         }
+
+        return nextOrders;
     }
 }
 
