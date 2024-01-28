@@ -50,7 +50,6 @@ public class LevelManager : MonoBehaviour
         currentTime -= Time.deltaTime;
         if(currentTime < 0)
         {
-            Debug.Log(currentTime);
             GameManager.Instance.LoadScene("MainScene");
         }
     }
