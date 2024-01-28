@@ -83,6 +83,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2341124319226127665, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.009999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341124319226127665, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Size.z
+      value: 0.026506254
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341124319226127665, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.000000002716444
+      objectReference: {fileID: 0}
+    - target: {fileID: 2341124319226127665, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.018253155
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267700622069729049, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.027180625
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267700622069729049, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Size.z
+      value: 0.0069347727
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267700622069729049, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0018252097
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267700622069729049, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.004430705
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267700622069729049, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.003117855
+      objectReference: {fileID: 0}
     - target: {fileID: 7954377569413440177, guid: 0acc68f76917c8f4abda4fe197437f9a, type: 3}
       propertyPath: m_Name
       value: Palacio

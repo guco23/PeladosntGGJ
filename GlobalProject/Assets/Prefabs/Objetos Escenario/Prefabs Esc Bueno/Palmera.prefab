@@ -87,6 +87,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Palmera
       objectReference: {fileID: 0}
+    - target: {fileID: 5379277533308002926, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
+      propertyPath: m_Size.x
+      value: 2.7043924
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379277533308002926, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
+      propertyPath: m_Size.z
+      value: 3.67521
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379277533308002926, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
+      propertyPath: m_Center.x
+      value: 2.4199514
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379277533308002926, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.3840509
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
 --- !u!4 &5959218446970534558 stripped

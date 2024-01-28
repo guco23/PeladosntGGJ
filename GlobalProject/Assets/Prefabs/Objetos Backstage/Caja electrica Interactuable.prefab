@@ -594,6 +594,8 @@ GameObject:
   - component: {fileID: 7075033672969164230}
   - component: {fileID: 7204758703063172707}
   - component: {fileID: 7204758703063172706}
+  - component: {fileID: 6774708650564003539}
+  - component: {fileID: 6712708669764562813}
   m_Layer: 0
   m_Name: Caja electrica Interactuable
   m_TagString: Untagged
@@ -700,3 +702,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: caja luces
   borderMesh: {fileID: 7209403150939471429}
+--- !u!114 &6774708650564003539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204758703063172705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+--- !u!114 &6712708669764562813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204758703063172705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cf61398f6e897458d518f6fa7c3006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
