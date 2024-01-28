@@ -14,6 +14,8 @@ public class MusicComponent : MonoBehaviour
     [SerializeField] private AudioSource _playableSource;
     [SerializeField] private AudioSource _effectsSource;
 
+    [SerializeField] private Animator _cortinasAnimator;
+
     [SerializeField] private float _fadeTime;
     [SerializeField] private float _umbral;
 
@@ -32,6 +34,7 @@ public class MusicComponent : MonoBehaviour
             if (_firstLoop)
             {
                 _effectsSource.Play();
+                _cortinasAnimator.SetBool("Abierto", true);
                 _firstLoop = false;
                 Debug.Log("Aplausos");
             }
