@@ -598,6 +598,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dbe69c74ac3563d4e9612ded652529ae, type: 3}
   - {fileID: 8300000, guid: 6b97e25e53291e641910017487c01bc7, type: 3}
   - {fileID: 8300000, guid: d3459f01461d06541af10f14d311c641, type: 3}
+  - {fileID: 8300000, guid: 8c0ad74850079f04883966f1b2dca91a, type: 3}
+  - {fileID: 8300000, guid: 7ea222a8f3ecd6649a8f31c321c3fa8a, type: 3}
+  - {fileID: 8300000, guid: 810a1ab1e7980c04984d5ea12452dae5, type: 3}
+  - {fileID: 8300000, guid: 0c1eceb5816a3b945ada23078a88fe1e, type: 3}
+  - {fileID: 8300000, guid: 5078f8df3621aee4e86f9a7218cc0cd4, type: 3}
+  - {fileID: 8300000, guid: 3bf3380844b3960498aff126163ed6ce, type: 3}
   timeBetween: 2
 --- !u!82 &2452253982995254137
 AudioSource:
