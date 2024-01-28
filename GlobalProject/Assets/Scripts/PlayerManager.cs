@@ -143,8 +143,6 @@ public class PlayerManager : MonoBehaviour
             }
 
         }
-
-        
     }
     //metodo de referencia muerta
     public void AddItem(string itemName)
@@ -157,7 +155,10 @@ public class PlayerManager : MonoBehaviour
         playerRaycast = GetComponent<PlayerRaycast>();
         playerPlaceComponent = GetComponent<PlayerPlaceComponent>();
     }
-
+    /// <summary>
+    /// Agrega las acciones al diccionario de ordenes
+    /// </summary>
+    /// <param name="ordenenes"></param>
     public void AddOrders(List<string> ordenenes)
     {
         orders.Clear();
@@ -210,7 +211,7 @@ public class PlayerManager : MonoBehaviour
     public List<string> SelectNextOrders()
     {
        
-
+        
         int currentActions = actionsList.Count;
 
 

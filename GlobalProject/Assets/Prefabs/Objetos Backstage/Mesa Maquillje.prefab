@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 3431459617254194450}
   - component: {fileID: 5620221547422584193}
   - component: {fileID: 5014115998799417141}
+  - component: {fileID: 7160918526158805369}
   m_Layer: 0
   m_Name: TriggerPlace
   m_TagString: Untagged
@@ -157,7 +158,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8312e46b6680a3e468bcd7ce4f23b37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeTag: 
+  placeTag: mesa
+--- !u!114 &7160918526158805369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927931187096414631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
 --- !u!1 &3944685993421583600
 GameObject:
   m_ObjectHideFlags: 0
