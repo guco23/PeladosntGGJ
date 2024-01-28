@@ -565,7 +565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7945339230460331333, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7945339230460331334, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
       propertyPath: m_RootOrder
@@ -1012,7 +1012,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770934181}
-  m_LocalRotation: {x: 0.0011925458, y: 0.96358913, z: -0.26735023, w: 0.0042981976}
+  m_LocalRotation: {x: 0.0011925536, y: 0.96358913, z: -0.26735026, w: 0.004298226}
   m_LocalPosition: {x: 18.323994, y: 15.108866, z: 20.240257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1197,7 +1197,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048197739}
-  m_LocalRotation: {x: 0.0011925458, y: 0.96358913, z: -0.26735023, w: 0.0042981976}
+  m_LocalRotation: {x: 0.0011925536, y: 0.96358913, z: -0.26735026, w: 0.004298226}
   m_LocalPosition: {x: 6.3886967, y: 2.777275, z: 2.9640696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1494,6 +1494,10 @@ PrefabInstance:
     - target: {fileID: 7945339230460331333, guid: e96ee46604be1c94baa0ae92bef94c47, type: 3}
       propertyPath: m_Name
       value: Prefab de escenario Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945339230460331333, guid: e96ee46604be1c94baa0ae92bef94c47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7945339230460331334, guid: e96ee46604be1c94baa0ae92bef94c47, type: 3}
       propertyPath: m_RootOrder
