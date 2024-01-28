@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     static GameManager instance;
     static public GameManager Instance { get { return instance; } }
 
+    public List<string> ordenesList;
+
 
     private int numPlayers = 2;
     private int actualPlayer = 0;
@@ -35,8 +37,17 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void LoadScene(string sceneName)
+
+    public void updateOrdersList(List<string> list)
     {
+        ordenesList.Clear();
+        for(int i = 0; i < list.Count; i++)
+        {
+            ordenesList.Add(list[i]);
+        }  
+    }
+    public void LoadScene(string sceneName)
+    {       
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }
