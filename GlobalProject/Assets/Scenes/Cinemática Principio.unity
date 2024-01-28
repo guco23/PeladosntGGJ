@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &25720920 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5179934331777191405, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
+  m_PrefabInstance: {fileID: 372352093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &219790482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1008,8 +1013,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770934181}
-  m_LocalRotation: {x: 0.0011925536, y: 0.96358913, z: -0.26735026, w: 0.004298226}
-  m_LocalPosition: {x: 18.323994, y: 15.108866, z: 20.240257}
+  m_LocalRotation: {x: 0.00003284991, y: 0.99995023, z: -0.009337724, w: 0.0035178035}
+  m_LocalPosition: {x: 18.323994, y: 2.4205043, z: 26.127525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1052,17 +1057,17 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 1.6239929, y: 9.718698, z: 23.700256}
+  - position: {x: 1.6239929, y: -2.9696639, z: 29.587524}
     roll: 0.39
-  - position: {x: 1.3780041, y: 3.7933998, z: 15.028625}
+  - position: {x: 1.3780041, y: -4.6573677, z: 15.028625}
     roll: 1.53
-  - position: {x: 0.6317692, y: -1.1113415, z: 11.155054}
+  - position: {x: 0.6317692, y: -3.668163, z: 10.790648}
     roll: 15.8
-  - position: {x: 4.4667053, y: -2.4860601, z: 10.3417225}
-    roll: 3.38
-  - position: {x: 8.651997, y: -1.0948715, z: 8.011597}
+  - position: {x: 3.4533272, y: -2.4860601, z: 7.5414195}
+    roll: 3.28
+  - position: {x: 7.4307384, y: -1.0948715, z: 3.967484}
     roll: -15.6
-  - position: {x: 6.858448, y: -1.6145024, z: -4.4456744}
+  - position: {x: 7.8081684, y: -1.6145024, z: -5.038703}
     roll: -31.88
   - position: {x: -1.314312, y: -2.514045, z: -6.8942375}
     roll: -17.05
@@ -1193,7 +1198,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048197739}
-  m_LocalRotation: {x: 0.0011925536, y: 0.96358913, z: -0.26735026, w: 0.004298226}
+  m_LocalRotation: {x: 0.00003284991, y: 0.99995023, z: -0.009337724, w: 0.0035178035}
   m_LocalPosition: {x: 6.3886967, y: 2.777275, z: 2.9640696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1591,6 +1596,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7548812727610929398, guid: e2d8f9ebd9ff3a34e860b2e83dadd82d, type: 3}
+      propertyPath: _cortinasAnimator
+      value: 
+      objectReference: {fileID: 25720920}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2d8f9ebd9ff3a34e860b2e83dadd82d, type: 3}
 --- !u!114 &1484084111 stripped
