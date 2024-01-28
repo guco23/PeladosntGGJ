@@ -43,6 +43,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agua
       objectReference: {fileID: 0}
+    - target: {fileID: 5731802739549476849, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5450194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731802739549476849, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.61431414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731802739549476849, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
+      propertyPath: m_Size.z
+      value: 2.3442354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731802739549476849, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
+      propertyPath: m_Center.x
+      value: 0.038407683
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731802739549476849, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.14715707
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731802739549476849, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
+      propertyPath: m_Center.z
+      value: 0.061019182
+      objectReference: {fileID: 0}
     - target: {fileID: 5775333526389061991, guid: b8dfe6403944a02438753b2a4b279bb2, type: 3}
       propertyPath: m_RootOrder
       value: 0
