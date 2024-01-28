@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public int NumOrdenes = 2;
 
-    private int numPlayers = 2;
+    private int numPlayers = 3;
     private int actualPlayer = 0;
     private bool GamePaused;
 
@@ -56,11 +56,14 @@ public class GameManager : MonoBehaviour
     }
     public void LoadScene(string sceneName)
     {
-        NumOrdenes++;
-        if(sceneName == "MainScene")
-        {
+        Debug.Log(sceneName);
+        switch (sceneName) {
+            case "MainScene":
+            NumOrdenes++;
             updateOrdersList(PlayerManager.instance.SelectNextOrders());
+                break;
         }
+        
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }
@@ -72,7 +75,7 @@ public class GameManager : MonoBehaviour
     void updateNewScene(Scene scene, LoadSceneMode mode)
     {
         
-        //Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
+        Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
 
         //cambiar por el nombre de la escena principal
         if(scene.name == "MainScene")
@@ -80,8 +83,11 @@ public class GameManager : MonoBehaviour
             ++actualPlayer;
             PlayerManager.instance.AddOrders(ordenesList);
         }
-        if (actualPlayer > numPlayers -1 && scene.name != "EndScene")
+
+        //si estoy en el ultimo jugador 
+        if (actualPlayer == numPlayers && scene.name != "EndScene")
         {
+            actualPlayer = 0;
             SceneManager.LoadScene("EndScene");
         }
     }

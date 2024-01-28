@@ -168,7 +168,7 @@ public class PlayerManager : MonoBehaviour
         }
         ordersLeft = ordenenes.Count;
 
-        print(ordenenes);
+        //print(ordenenes);
         audioClips.PlayOrders(ordenenes);
 
     }
@@ -186,7 +186,7 @@ public class PlayerManager : MonoBehaviour
         //flujo normal
         else
         {
-            while(ordenes.Count < numberOfActions)
+            while(ordenes.Count < GameManager.Instance.NumOrdenes)
             {
                 int aux = Random.Range(0, listaTotalAcciones.Count);
 
@@ -270,7 +270,7 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
-        if(nextOrders.Count < numberOfActions)
+        if(nextOrders.Count < 3)
         {
             nextOrders.Clear();
             nextOrders.Add("coger_N_sable");
