@@ -16,7 +16,6 @@ public class AudioClips : MonoBehaviour
     void Awake()
     {
         mySrc = GetComponent<AudioSource>();
-        Debug.Log(mySrc.clip.name);
     }
   
     public void SetAudio(string name)
