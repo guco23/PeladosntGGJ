@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public AudioClips audioClips;
+
     PlayerRaycast playerRaycast;
     PlayerPlaceComponent playerPlaceComponent;
 
@@ -114,8 +116,9 @@ public class PlayerManager : MonoBehaviour
     {
         List<string> lista = new List<string>();
 
-        lista.Add("agachar_L_tu vieja");
-        lista.Add("saltar_L_tu vieja");
+        lista.Add("accionar_N_luces");
+        lista.Add("accionar_N_polea");
+        lista.Add("agachar_L_palacio");
 
         AddOrders(lista);
 
@@ -132,6 +135,9 @@ public class PlayerManager : MonoBehaviour
             orders.Add(ordenenes[i], false);
         }
         ordersLeft = ordenenes.Count;
+
+        audioClips.PlayOrders(ordenenes);
+
     }
 
     public void SelectNextOrders()

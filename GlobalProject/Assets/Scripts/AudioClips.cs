@@ -8,7 +8,10 @@ public class AudioClips : MonoBehaviour
 {
     public List<AudioClip> clipList;
     private AudioSource mySrc;
-    
+
+    public float timeBetween = 2f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +41,18 @@ public class AudioClips : MonoBehaviour
         }
         //return i != clipList.Count;
     }
+
+    public void PlayOrders(List<string> list)
+    {
+        StartCoroutine("playQueue",list);
+    }
     public IEnumerator playQueue(List<string> list)
     {
         foreach(string s in list)
         {
             SetAudio(s);
             mySrc.Play();
-            yield return new WaitForSeconds(mySrc.clip.length);
+            yield return new WaitForSeconds(mySrc.clip.length + timeBetween);
         }
     }
 }
