@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: caja luces
-  borderMesh: {fileID: 7209403150939471429, guid: 856d5e3fdd44c144ab294034af3a6f09, type: 3}
+  borderMesh: {fileID: 3725341328413945796}
 --- !u!65 &3859710668943180864
 BoxCollider:
   m_ObjectHideFlags: 0
