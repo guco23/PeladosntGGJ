@@ -7,9 +7,10 @@ using UnityEngine.InputSystem;
 public class PlayerManager : MonoBehaviour
 {
     public LevelManager levelManager;
+    #region Audio
     public AudioClips audioClips;
-
     public AudioSource Aplausos;
+    #endregion
 
     PlayerRaycast playerRaycast;
     PlayerPlaceComponent playerPlaceComponent;

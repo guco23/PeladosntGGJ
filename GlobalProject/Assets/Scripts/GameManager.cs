@@ -46,16 +46,15 @@ public class GameManager : MonoBehaviour
 
     public void updateOrdersList(List<string> list)
     {
-        ordenesList.Clear();
-        for(int i = 0; i < list.Count; i++)
-        {
-            ordenesList.Add(list[i]);
-        }  
+        ordenesList = list;
     }
     public void LoadScene(string sceneName)
     {
         NumOrdenes++;
-        updateOrdersList(PlayerManager.instance.SelectNextOrders());
+        if(sceneName == "MainScene")
+        {
+            updateOrdersList(PlayerManager.instance.SelectNextOrders());
+        }
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }
@@ -75,7 +74,7 @@ public class GameManager : MonoBehaviour
             ++actualPlayer;
             PlayerManager.instance.AddOrders(ordenesList);
         }
-        if (actualPlayer > numPlayers && scene.name != "EndScene")
+        if (actualPlayer > numPlayers -1 && scene.name != "EndScene")
         {
             SceneManager.LoadScene("EndScene");
         }
