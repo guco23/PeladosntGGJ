@@ -13,39 +13,36 @@ public class AudioClips : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         mySrc = GetComponent<AudioSource>();
-        //Debug.Log(mySrc.clip.name);
+        Debug.Log(mySrc.clip.name);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     public void SetAudio(string name)
     {
         int i = 0;
         while (clipList[i].name != name && i < clipList.Count -1)
         {
             i++;
-            Debug.Log(i);
+            //Debug.Log(i);
         }
 
         if(i < clipList.Count)
         {
+            //print(i);
             mySrc.clip = clipList[i];
             mySrc.Play();
 
         }
-        //return i != clipList.Count;
     }
 
     public void PlayOrders(List<string> list)
     {
         StartCoroutine("playQueue",list);
     }
+
+
     public IEnumerator playQueue(List<string> list)
     {
         foreach(string s in list)

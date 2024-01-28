@@ -136,10 +136,13 @@ public class PlayerManager : MonoBehaviour
         }
         ordersLeft = ordenenes.Count;
 
+        print(ordenenes);
         audioClips.PlayOrders(ordenenes);
 
     }
 
+
+    //serializar todo esto
     public void SelectNextOrders()
     {
         int timeTolevel = 40;
