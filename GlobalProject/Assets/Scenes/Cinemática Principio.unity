@@ -1509,7 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f408c0a99c30f4e912e08320729e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMaxTime: 59
+  levelMaxTime: 40
   mainUI: {fileID: 1512064985}
   pauseUI: {fileID: 1674338876}
   text: {fileID: 415564529}
