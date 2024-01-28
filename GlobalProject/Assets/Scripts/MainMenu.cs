@@ -18,10 +18,12 @@ public class MainMenu : MonoBehaviour
         //    player.GetComponent<PlayerInput>().currentActionMap.actions[i].Disable();
         //}
         player.GetComponent<PlayerInput>().currentActionMap.Disable();
+        Time.timeScale = 0f;
     }
 
     public void PlayGame()
     {
+        Time.timeScale = 1f;
         Debug.Log("play");
 
         music._changeMusic = true;
