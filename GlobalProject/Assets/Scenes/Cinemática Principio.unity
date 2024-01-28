@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -539,6 +539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 971048404f62adb4f9b2a4ac29f977c0, type: 3}
+--- !u!1 &338903424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7216731553344446886, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
+  m_PrefabInstance: {fileID: 372352093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &372352093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -546,6 +551,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3859710668943180866, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
+      propertyPath: evento.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1371114213}
+    - target: {fileID: 3859710668943180866, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
+      propertyPath: evento.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchLights
+      objectReference: {fileID: 0}
     - target: {fileID: 7945339230460331333, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
       propertyPath: m_Name
       value: Prefab de escenario
@@ -1149,6 +1162,11 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+--- !u!1 &1003459195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1273118672548894031, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
+  m_PrefabInstance: {fileID: 372352093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1048197739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1513,9 @@ MonoBehaviour:
   mainUI: {fileID: 1512064985}
   pauseUI: {fileID: 1674338876}
   text: {fileID: 415564529}
-  lights: []
+  lights:
+  - {fileID: 338903424}
+  - {fileID: 1003459195}
 --- !u!4 &1371114214
 Transform:
   m_ObjectHideFlags: 0
