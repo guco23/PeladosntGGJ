@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MusicComponent : MonoBehaviour
 {
-    [SerializeField] private bool _changeMusic = false;
+    public bool _changeMusic = false;
 
     private bool _firstLoop = true;
     private bool _menuCompleted = false;
@@ -42,7 +42,7 @@ public class MusicComponent : MonoBehaviour
         }
     }
 
-    private void ChangeToPlayableState()
+    public void ChangeToPlayableState()
     {
         if (!_menuCompleted)
         {
