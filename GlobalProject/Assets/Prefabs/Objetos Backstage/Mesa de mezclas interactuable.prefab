@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 8587279812261972304}
   - component: {fileID: 8587279812261972310}
   - component: {fileID: 8587279812261972305}
+  - component: {fileID: 4317923440104405681}
+  - component: {fileID: 6627227479136345225}
   m_Layer: 0
   m_Name: Mesa de mezclas interactuable
   m_TagString: Untagged
@@ -196,3 +198,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectName: mesa de mezclas
   borderMesh: {fileID: 8356855710202348189}
+--- !u!114 &4317923440104405681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4004168672585934514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+--- !u!114 &6627227479136345225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4004168672585934514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cf61398f6e897458d518f6fa7c3006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento:
+    m_PersistentCalls:
+      m_Calls: []

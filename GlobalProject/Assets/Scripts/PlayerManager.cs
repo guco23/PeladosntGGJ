@@ -111,8 +111,7 @@ public class PlayerManager : MonoBehaviour
 
             if(ordersLeft == 0)
             {
-                //print("ya no quedan ordenes"); 
-                //llamar al cambio de escena
+                GameManager.Instance.LoadScene("MainScene");
             }
 
         }
