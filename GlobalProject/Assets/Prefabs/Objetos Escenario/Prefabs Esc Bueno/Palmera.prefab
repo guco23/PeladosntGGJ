@@ -110,3 +110,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3554878949359450176, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
   m_PrefabInstance: {fileID: 7198460894105780958}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5989942679990721833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3514671565897408503, guid: 7abf1d380040728448f97d8246a88e8a, type: 3}
+  m_PrefabInstance: {fileID: 7198460894105780958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7738521820897810036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5989942679990721833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+--- !u!114 &197411716223249692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5989942679990721833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8312e46b6680a3e468bcd7ce4f23b37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeTag: plamera
