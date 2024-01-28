@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject menuUI;
     public Animator animator;
     public GameObject player;
+    public MusicComponent music;
 
     void Start()
     {
@@ -22,6 +23,8 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         Debug.Log("play");
+
+        music._changeMusic = true;
 
         animator.SetBool("Play", true);
 
