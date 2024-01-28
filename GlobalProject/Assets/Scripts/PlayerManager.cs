@@ -21,7 +21,9 @@ public class PlayerManager : MonoBehaviour
     public int numberOfActions = 3;
 
     public  List<string> listaTotalAcciones = new List<string>();
-    
+
+
+    float actualTime;
     //SERIALIZADAS PARA DEBUG
 
     //lista de las acciones que se han ido haciendo
@@ -37,7 +39,27 @@ public class PlayerManager : MonoBehaviour
     List<string> itemsList = new List<string>();
 
 
+    public static PlayerManager instance = null;
 
+    private void Update()
+    {
+        if(levelManager != null)
+        {
+            actualTime =  levelManager.getLevelMaxTime() - levelManager.getLevelCurrentTime();
+        }
+    }
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void InteractObject(InputAction.CallbackContext context)
     {
@@ -177,13 +199,9 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    private void OnDestroy()
-    {
-        GameManager.Instance.updateOrdersList(SelectNextOrders());
-    }
     public List<string> SelectNextOrders()
     {
-        float actualTime = levelManager.getLevelMaxTime() -levelManager.getLevelCurrentTime();
+       
 
         int currentActions = actionsList.Count;
 
@@ -219,10 +237,10 @@ public class PlayerManager : MonoBehaviour
         //si no se han elegido 3 acciones, se rellenan aleatoriamente con el resto de acciones que se hayan hecho
 
         int i = 0;
-        while(nextOrders.Count < numberOfActions)
+        while(nextOrders.Count < numberOfActions &&actionsList.Count >0)
         {
             int aux = Random.Range(0, actionsList.Count);
-
+            print(aux);
             //chequear que es una accion distinta a las que ya tenemos seleccionados
             int j = 0;
             while (j < nextOrders.Count && nextOrders[j] != actionsList[aux]) j++;
@@ -242,6 +260,14 @@ public class PlayerManager : MonoBehaviour
             if(i == 1000){
                 break;
             }
+        }
+
+        if(nextOrders.Count < numberOfActions)
+        {
+            nextOrders.Clear();
+            nextOrders.Add("coger_N_sable");
+            nextOrders.Add("mirar_N_mercado");
+            nextOrders.Add("saltar_O_caja");
         }
 
         return nextOrders;
