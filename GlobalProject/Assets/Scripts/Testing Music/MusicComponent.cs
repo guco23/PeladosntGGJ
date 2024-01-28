@@ -36,7 +36,7 @@ public class MusicComponent : MonoBehaviour
                 _effectsSource.Play();
                 _cortinasAnimator.SetBool("Abierto", true);
                 _firstLoop = false;
-                Debug.Log("Aplausos");
+                //Debug.Log("Aplausos");
             }
             else
             {
@@ -54,13 +54,13 @@ public class MusicComponent : MonoBehaviour
                 _menuSource.volume = 0;
                 _menuCompleted = true;
                 _playableSource.Play();
-                Debug.Log("Menu = 0");
+                //Debug.Log("Menu = 0");
             }
 
             else
             {
                 LerpMenu();
-                Debug.Log("Bajo Volumen Menu");
+                //Debug.Log("Bajo Volumen Menu");
             }
         }
 
@@ -70,13 +70,13 @@ public class MusicComponent : MonoBehaviour
             {
                 _playableSource.volume = 1;
                 _changeMusic = false;
-                Debug.Log("Playable  = 1");
+                //Debug.Log("Playable  = 1");
             }
 
             else
             {
                 LerpPlayable();
-                Debug.Log("Subo Volumen Playable");
+                //Debug.Log("Subo Volumen Playable");
             }
         }         
     }

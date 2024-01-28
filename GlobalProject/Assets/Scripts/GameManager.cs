@@ -1,3 +1,4 @@
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,11 @@ public class GameManager : MonoBehaviour
     static public GameManager Instance { get { return instance; } }
 
     public List<string> ordenesList;
+
+    [SerializeField]
+    private List<AudioClip> audioClipList;
+
+    private List<string> ordersList;
 
     public int NumOrdenes = 2;
 
@@ -100,5 +106,32 @@ public class GameManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+
+
+    /// <summary>
+    /// Crea las ordenes para la pirmera iteracion
+    /// </summary>
+    public void GenenateComands()
+    {
+        List<string> list = new List<string>();
+        while(list.Count < NumOrdenes)
+        {
+            int aux = Random.Range(0, audioClipList.Count);
+
+            ordersList.Add(audioClipList[aux].name);
+        }
+    }
+    public AudioClip GetOrderClip(string name)
+    {
+        int i = 0;
+        while (audioClipList[i].name != name && i < audioClipList.Count - 1)
+        {
+            i++;
+        }
+        if(i > audioClipList.Count - 1)
+            Debug.LogError("El audio no se encontró en la lista de clips");
+
+        return audioClipList[i];
     }
 }

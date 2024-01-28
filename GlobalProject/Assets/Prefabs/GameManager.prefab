@@ -44,3 +44,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad48a1b21ab653f4994b7c0853e3fe5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ordenesList:
+  - 
+  audioClipList:
+  - {fileID: 8300000, guid: e294ebe39f1f32742b5f7c1fb8088e00, type: 3}
+  - {fileID: 8300000, guid: c99c8e411e43858419a624b66430a057, type: 3}
+  - {fileID: 8300000, guid: 8c0ad74850079f04883966f1b2dca91a, type: 3}
+  - {fileID: 8300000, guid: 40cad3f88c2a72c4c807bca05fc6f40d, type: 3}
+  - {fileID: 8300000, guid: 4b6dcfe38aeed7e44bd7b18f47dcde92, type: 3}
+  - {fileID: 8300000, guid: b2914eb0cb07bb840be0b52efde853fa, type: 3}
+  - {fileID: 8300000, guid: f801e0dbe6102b8409cdb3ff11f9758e, type: 3}
+  - {fileID: 8300000, guid: 18586ff65a902a84ca5edddceaded70d, type: 3}
+  - {fileID: 8300000, guid: ddff9d186ff1c8648a32cbd435602a33, type: 3}
+  - {fileID: 8300000, guid: 913747106bf88c346b26040419007349, type: 3}
+  - {fileID: 8300000, guid: 566e2823d54a5d748859264d41460901, type: 3}
+  - {fileID: 8300000, guid: adc165e5cdedd91458f195fb417e339f, type: 3}
+  - {fileID: 8300000, guid: 783cabc0e10a9884b9768e91d84e4794, type: 3}
+  - {fileID: 8300000, guid: 6ffd8eed08c630b41ba37506fbb0cdba, type: 3}
+  - {fileID: 8300000, guid: a6a4c170f28355b4da6ad167d0d08395, type: 3}
+  - {fileID: 8300000, guid: 851e8ec3eaac3174d92b3cb38e99f2a0, type: 3}
+  - {fileID: 8300000, guid: b8b041e3f20aadd48a9fe1d3616fdbe1, type: 3}
+  - {fileID: 8300000, guid: 7ea222a8f3ecd6649a8f31c321c3fa8a, type: 3}
+  - {fileID: 8300000, guid: ab544605290ac5549bebf0dbd6e5fca9, type: 3}
+  - {fileID: 8300000, guid: 8de1e5108a9da5d4693dc5cf8464c2b0, type: 3}
+  - {fileID: 8300000, guid: cd723bb04264920439e825e806ddb875, type: 3}
+  - {fileID: 8300000, guid: 148304c5aefaa5346a7c1fa8ff16acd4, type: 3}
+  - {fileID: 8300000, guid: 4731f03286c780f48917ce94ca6cad9a, type: 3}
+  - {fileID: 8300000, guid: 810a1ab1e7980c04984d5ea12452dae5, type: 3}
+  - {fileID: 8300000, guid: 0c1af20282770654bbee51bfb3d7778c, type: 3}
+  - {fileID: 8300000, guid: 6aae074a76191ea429f5d80837491fd0, type: 3}
+  - {fileID: 8300000, guid: 42ac3cc3815ec4548b321ea4e9cce7b5, type: 3}
+  - {fileID: 8300000, guid: 817eaab721faf894b896e19578cfa3db, type: 3}
+  - {fileID: 8300000, guid: 529dc2b38666a014b93b293c99a4233b, type: 3}
+  - {fileID: 8300000, guid: 953b2a2c9f0eca54d87539999e5f3cd0, type: 3}
+  - {fileID: 8300000, guid: 0c1eceb5816a3b945ada23078a88fe1e, type: 3}
+  - {fileID: 8300000, guid: 5078f8df3621aee4e86f9a7218cc0cd4, type: 3}
+  - {fileID: 8300000, guid: 913c899dbf23a2440bbb26382e55f0b8, type: 3}
+  - {fileID: 8300000, guid: 42b47f4424a846b41add594960b010ce, type: 3}
+  - {fileID: 8300000, guid: 7b555654c5688454aaea92f136495405, type: 3}
+  - {fileID: 8300000, guid: 3bf3380844b3960498aff126163ed6ce, type: 3}
+  - {fileID: 8300000, guid: dbe69c74ac3563d4e9612ded652529ae, type: 3}
+  - {fileID: 8300000, guid: 6b97e25e53291e641910017487c01bc7, type: 3}
+  - {fileID: 8300000, guid: d3459f01461d06541af10f14d311c641, type: 3}
+  NumOrdenes: 4
+  maxNumActions: 30

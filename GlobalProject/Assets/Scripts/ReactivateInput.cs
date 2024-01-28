@@ -20,5 +20,7 @@ public class ReactivateInput : MonoBehaviour
         inGameUI.SetActive(true);
 
         playerManager.GenerarPrimerasOrdenes();
+
+        GameManager.Instance.GenenateComands();
     }
 }

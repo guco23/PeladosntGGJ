@@ -20,20 +20,9 @@ public class AudioClips : MonoBehaviour
   
     public void SetAudio(string name)
     {
-        int i = 0;
-        while (clipList[i].name != name && i < clipList.Count -1)
-        {
-            i++;
-            //Debug.Log(i);
-        }
+        mySrc.clip = GameManager.Instance.GetOrderClip(name);
 
-        if(i < clipList.Count)
-        {
-            //print(i);
-            mySrc.clip = clipList[i];
-            mySrc.Play();
-
-        }
+        mySrc.Play();
     }
 
     public void PlayOrders(List<string> list)

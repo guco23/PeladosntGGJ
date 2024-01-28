@@ -146,6 +146,7 @@ public class PlayerManager : MonoBehaviour
 
         
     }
+    //metodo de referencia muerta
     public void AddItem(string itemName)
     {
         itemsList.Add(itemName);
@@ -175,13 +176,14 @@ public class PlayerManager : MonoBehaviour
     public void GenerarPrimerasOrdenes()
     {
         List<string> ordenes = new List<string>();
-
+        //no le veo a esta defensiva
         if (listaTotalAcciones.Count < 3) {
 
             ordenes.Add("coger_N_sable");
             ordenes.Add("mirar_N_mercado");
             ordenes.Add("saltar_O_caja");
         }
+        //flujo normal
         else
         {
             while(ordenes.Count < numberOfActions)
