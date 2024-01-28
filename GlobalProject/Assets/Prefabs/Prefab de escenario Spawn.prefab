@@ -1240,6 +1240,7 @@ GameObject:
   - component: {fileID: 8440598414132484582}
   - component: {fileID: 7511760586631974166}
   - component: {fileID: 7878515905296439376}
+  - component: {fileID: 3967417588426479142}
   m_Layer: 0
   m_Name: Telon Atras
   m_TagString: Untagged
@@ -1312,6 +1313,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3967417588426479142
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654317818118687614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6442166073417297913, guid: d2b5519765ab0394aacae6df6169b6e9, type: 3}
 --- !u!1 &7656426690032377536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,6 +2099,22 @@ PrefabInstance:
     - target: {fileID: 1935762275373755402, guid: 6bff4264d603dd047b9fe1198e7fbd2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935762275583257288, guid: 6bff4264d603dd047b9fe1198e7fbd2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935762275583257288, guid: 6bff4264d603dd047b9fe1198e7fbd2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935762277264605718, guid: 6bff4264d603dd047b9fe1198e7fbd2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1935762277264605718, guid: 6bff4264d603dd047b9fe1198e7fbd2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bff4264d603dd047b9fe1198e7fbd2c, type: 3}

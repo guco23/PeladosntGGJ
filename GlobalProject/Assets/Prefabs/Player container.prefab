@@ -622,7 +622,6 @@ MonoBehaviour:
   levelManager: {fileID: 0}
   audioClips: {fileID: 3125525112917050337}
   Aplausos: {fileID: 248569922737481544}
-  AplausoSound: {fileID: 0}
   timeTolevel: 40
   maxActions: 10
   keepOriginalPercentage: 95
@@ -713,7 +712,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6ffd8eed08c630b41ba37506fbb0cdba, type: 3}
   - {fileID: 8300000, guid: a6a4c170f28355b4da6ad167d0d08395, type: 3}
   - {fileID: 8300000, guid: 851e8ec3eaac3174d92b3cb38e99f2a0, type: 3}
-  - {fileID: 8300000, guid: cdf6a7b86fdb5344eb6a64438c970a6f, type: 3}
+  - {fileID: 8300000, guid: b8b041e3f20aadd48a9fe1d3616fdbe1, type: 3}
   - {fileID: 8300000, guid: ab544605290ac5549bebf0dbd6e5fca9, type: 3}
   - {fileID: 8300000, guid: 8de1e5108a9da5d4693dc5cf8464c2b0, type: 3}
   - {fileID: 8300000, guid: 148304c5aefaa5346a7c1fa8ff16acd4, type: 3}
@@ -735,7 +734,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0c1eceb5816a3b945ada23078a88fe1e, type: 3}
   - {fileID: 8300000, guid: 5078f8df3621aee4e86f9a7218cc0cd4, type: 3}
   - {fileID: 8300000, guid: 3bf3380844b3960498aff126163ed6ce, type: 3}
-  timeBetween: 2
+  - {fileID: 8300000, guid: 40cad3f88c2a72c4c807bca05fc6f40d, type: 3}
+  - {fileID: 8300000, guid: 4b6dcfe38aeed7e44bd7b18f47dcde92, type: 3}
+  - {fileID: 8300000, guid: f801e0dbe6102b8409cdb3ff11f9758e, type: 3}
+  - {fileID: 8300000, guid: cd723bb04264920439e825e806ddb875, type: 3}
+  - {fileID: 8300000, guid: 817eaab721faf894b896e19578cfa3db, type: 3}
+  timeBetween: 3.5
 --- !u!82 &2452253982995254137
 AudioSource:
   m_ObjectHideFlags: 0
@@ -859,7 +863,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2592243817164623160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.75, y: -6.3398314, z: 5.42}
+  m_LocalPosition: {x: -1.75, y: -6.3398314, z: 5.420001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

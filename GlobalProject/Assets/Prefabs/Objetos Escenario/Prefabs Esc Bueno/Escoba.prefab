@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 877504711648136363}
   - component: {fileID: 1231950376025343877}
   - component: {fileID: 4929174034700538599}
+  - component: {fileID: 5515053675172675671}
   m_Layer: 0
   m_Name: Escoba
   m_TagString: Untagged
@@ -126,6 +127,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.014786811, y: 0.01153156, z: 0.09015698}
   m_Center: {x: 0.000366122, y: -0.0003156382, z: 0.045973424}
+--- !u!114 &5515053675172675671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72861937267166398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
 --- !u!1 &871168141521647374
 GameObject:
   m_ObjectHideFlags: 0
