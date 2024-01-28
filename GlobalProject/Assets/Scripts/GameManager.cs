@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = true;
         //Debug.Log("Tu Vieja");
     }
 
@@ -36,6 +37,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ChangeCursorState()
+    {
+        Cursor.visible = !Cursor.visible;
     }
 
     public void updateOrdersList(List<string> list)

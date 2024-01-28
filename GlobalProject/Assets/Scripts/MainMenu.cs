@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
         //    player.GetComponent<PlayerInput>().currentActionMap.actions[i].Disable();
         //}
         player.GetComponent<PlayerInput>().currentActionMap.Disable();
+        GameManager.Instance.ChangeCursorState();
         Time.timeScale = 0f;
     }
 
