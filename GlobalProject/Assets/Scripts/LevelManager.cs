@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 public class LevelManager : MonoBehaviour
-{
+{   
     [Tooltip("Time in seconds")]
     [SerializeField] private float levelMaxTime = 5;
     private float currentTime;

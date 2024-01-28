@@ -47,7 +47,8 @@ public class GameManager : MonoBehaviour
         }  
     }
     public void LoadScene(string sceneName)
-    {       
+    {
+        updateOrdersList(PlayerManager.instance.SelectNextOrders());
         SceneManager.LoadScene(sceneName);
         Time.timeScale = 1.0f;
     }
@@ -62,9 +63,10 @@ public class GameManager : MonoBehaviour
         //Debug.Log(scene.name +" " + actualPlayer + " "+ numPlayers);
 
         //cambiar por el nombre de la escena principal
-        if(scene.name == "levelScene")
+        if(scene.name == "MainScene")
         {
             ++actualPlayer;
+            PlayerManager.instance.AddOrders(ordenesList);
         }
         if (actualPlayer > numPlayers && scene.name != "EndScene")
         {
