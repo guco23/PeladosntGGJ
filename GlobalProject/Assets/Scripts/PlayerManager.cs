@@ -6,12 +6,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public LevelManager levelManager;
     public AudioClips audioClips;
 
     PlayerRaycast playerRaycast;
     PlayerPlaceComponent playerPlaceComponent;
 
     CooldownComponent cooldownComponent;
+
+    public float timeTolevel = 40;
+    public int maxActions = 10;
+    public float keepOriginalPercentage = 95;
+
+    public int numberOfActions = 3;
+
     //SERIALIZADAS PARA DEBUG
 
     //lista de las acciones que se han ido haciendo
@@ -145,32 +153,67 @@ public class PlayerManager : MonoBehaviour
     //serializar todo esto
     public void SelectNextOrders()
     {
-        int timeTolevel = 40;
-        int actualTime = 0;
+        float actualTime = levelManager.getLevelMaxTime() -levelManager.getLevelCurrentTime();
 
-        int maxActions= 10;
-        int currentActions= 3;
+        int currentActions = actionsList.Count;
 
-        float keepOriginalPercentage = 95;
+
+        float percentageThisIteration = keepOriginalPercentage;
 
         //cada segundo extra reduce la probabilidad un 0,5%
         if(actualTime > timeTolevel)
         {
-            keepOriginalPercentage -= (actualTime - timeTolevel) / 2;
+            percentageThisIteration -= (actualTime - timeTolevel) / 2;
         }
         if(currentActions > maxActions)//cada accion extra la reduce un 2%
         {
-            keepOriginalPercentage -= (currentActions - maxActions) * 2;
+            percentageThisIteration -= (currentActions - maxActions) * 2;
         }
+
+        List<string> nextOrders = new List<string>();
 
         //las acciones que esten en true, tendran esa posibilidad, las que esten en false tendran un 0%
 
+        foreach (KeyValuePair<string,bool> pair in orders)
+        {
+            if (pair.Value)
+            {
+                if (percentageThisIteration > Random.Range(0f, 100f))
+                {
+                    nextOrders.Add(pair.Key);
+                }
+            }          
+        }
+
+
         //si no se han elegido 3 acciones, se rellenan aleatoriamente con el resto de acciones que se hayan hecho
 
-        //se vigila que no haya repeticiones de acciones
+        int i = 0;
+        while(nextOrders.Count < numberOfActions)
+        {
+            int aux = Random.Range(0, actionsList.Count);
 
-        //si no hay suficientes acciones aun asi, se crean de forma aleatoria
+            //chequear que es una accion distinta a las que ya tenemos seleccionados
+            int j = 0;
+            while (j < nextOrders.Count && nextOrders[j] != actionsList[aux]) j++;
 
+            //si es distinta
+            if (j == nextOrders.Count)
+            {
+                nextOrders.Add(actionsList[aux]);
+            }
+
+
+            i++;
+
+
+            //si no hay suficientes acciones aun asi, se crean de forma aleatoria
+            if(i == 1000)
+            {
+
+            }
+
+        }
     }
 }
 

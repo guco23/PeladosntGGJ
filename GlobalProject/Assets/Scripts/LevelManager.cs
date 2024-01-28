@@ -16,6 +16,9 @@ public class LevelManager : MonoBehaviour
 
     public List<GameObject> lights;
     
+    public float getLevelMaxTime() { return levelMaxTime; }
+    public float getLevelCurrentTime() { return currentTime; }
+
     public void SwitchLights()
     {
         for(int i = 0; i < lights.Count; i++)
