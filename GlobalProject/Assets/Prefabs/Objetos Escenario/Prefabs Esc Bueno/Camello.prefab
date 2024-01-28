@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3718576256949412198}
+  - component: {fileID: 3267147504181283073}
+  - component: {fileID: 6041946807810613188}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -34,6 +36,33 @@ Transform:
   m_Father: {fileID: 1221481462938343107}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &3267147504181283073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459703353251360606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06466a28314ae7048bea6a972819d985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 3
+--- !u!114 &6041946807810613188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459703353251360606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c714b4fc985653247bfdcf4ef3c61e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleTag: camello
+  saltando: 0
 --- !u!1 &1997419310143392889
 GameObject:
   m_ObjectHideFlags: 0
