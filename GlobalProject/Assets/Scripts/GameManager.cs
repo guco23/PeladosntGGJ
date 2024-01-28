@@ -5,8 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{   
-    
+{       
     static GameManager instance;
     static public GameManager Instance { get { return instance; } }
 
