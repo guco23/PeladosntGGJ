@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeCursorState()
     {
-        Cursor.visible = !Cursor.visible;
+       //Cursor.visible = !Cursor.visible;
     }
 
     public void updateOrdersList(List<string> list)
