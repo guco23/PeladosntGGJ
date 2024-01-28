@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour
     public LevelManager levelManager;
     public AudioClips audioClips;
 
+    public AudioSource Aplausos;
+
     PlayerRaycast playerRaycast;
     PlayerPlaceComponent playerPlaceComponent;
 
@@ -126,6 +128,9 @@ public class PlayerManager : MonoBehaviour
         //chequear si era una de las acciones
         if (orders.ContainsKey(actionName) && orders[actionName] != true)
         {
+            //repoducir canciones
+            Aplausos.Play();
+
             orders[actionName] = true;
             ordersLeft--;
 
@@ -237,7 +242,7 @@ public class PlayerManager : MonoBehaviour
         //si no se han elegido 3 acciones, se rellenan aleatoriamente con el resto de acciones que se hayan hecho
 
         int i = 0;
-        while(nextOrders.Count < numberOfActions &&actionsList.Count >0)
+        while(nextOrders.Count < GameManager.Instance.NumOrdenes &&actionsList.Count >0)
         {
             int aux = Random.Range(0, actionsList.Count);
             print(aux);

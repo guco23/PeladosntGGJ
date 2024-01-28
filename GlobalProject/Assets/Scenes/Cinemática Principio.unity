@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -793,6 +793,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3543743930020478497, guid: e7cecb501cae2634b9c08eda2447117c, type: 3}
+      propertyPath: NumOrdenes
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3543743930020478498, guid: e7cecb501cae2634b9c08eda2447117c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1637,6 +1641,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1291160761}
     m_Modifications:
+    - target: {fileID: 3570342505031636121, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
+      propertyPath: m_text
+      value: Exit Game
+      objectReference: {fileID: 0}
     - target: {fileID: 3570342505375593411, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1776,6 +1784,26 @@ PrefabInstance:
     - target: {fileID: 3570342506481087105, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483256891213960962, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483256891213960962, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1484084111}
+    - target: {fileID: 7483256891213960962, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetPlayeNum
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483256891213960962, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483256891213960962, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94bab6ad8bc31434faec14a623e6a441, type: 3}
