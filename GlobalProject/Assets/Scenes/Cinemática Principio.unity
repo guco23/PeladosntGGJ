@@ -770,6 +770,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8877752167204991047, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
+      propertyPath: evento.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Cerrar Telon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64beed58d5dbd2d4d837c97ede500676, type: 3}
 --- !u!95 &372352094 stripped

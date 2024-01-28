@@ -76,8 +76,13 @@ public class GameManager : MonoBehaviour
     public void SetPlayeNum(string number)
     {
         numPlayers = int.Parse(number);
-        //Debug.Log("Numero de players " + numPlayers);
     }
+    /// <summary>
+    /// Metodo que actua como Start para el gameManager
+    /// Se suscribe a un evento que se llama al terminar de cargar una escena
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <param name="mode"></param>
     void updateNewScene(Scene scene, LoadSceneMode mode)
     {
         
@@ -130,11 +135,16 @@ public class GameManager : MonoBehaviour
         while(list.Count < NumOrdenes)
         {
             int aux = Random.Range(0, audioClipList.Count);
-            Debug.Log(audioClipList[aux]);
+
+            Debug.Log(aux);
+            //garantizamos que no son repetidos
+            //while () aux = Random.Range(0, audioClipList.Count-1);
+
             list.Add(audioClipList[aux].name);
         }
-        Debug.Log(list);
+        ordenesList = list;
     }
+
     public AudioClip GetOrderClip(string name)
     {
         int i = 0;
