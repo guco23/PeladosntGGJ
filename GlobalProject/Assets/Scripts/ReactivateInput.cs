@@ -9,6 +9,7 @@ public class ReactivateInput : MonoBehaviour
     public GameObject player;
     public LevelManager levelManager;
     public GameObject inGameUI;
+    public PlayerManager playerManager;
 
     public void vuelveElFckingInputPuñeta()
     {
@@ -17,5 +18,7 @@ public class ReactivateInput : MonoBehaviour
         levelManager.enabled = true;
 
         inGameUI.SetActive(true);
+
+        playerManager.GenerarPrimerasOrdenes();
     }
 }

@@ -126,14 +126,6 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
-        List<string> lista = new List<string>();
-
-        lista.Add("accionar_N_luces");
-        lista.Add("accionar_N_polea");
-        lista.Add("agachar_L_palacio");
-
-        AddOrders(lista);
-
         playerRaycast = GetComponent<PlayerRaycast>();
         playerPlaceComponent = GetComponent<PlayerPlaceComponent>();
     }
@@ -176,11 +168,13 @@ public class PlayerManager : MonoBehaviour
                 //si es distinta
                 if (j == ordenes.Count)
                 {
-                    ordenes.Add(actionsList[aux]);
+                    ordenes.Add(listaTotalAcciones[aux]);
                 }
             }
         }
 
+
+        AddOrders(ordenes);
 
     }
 
