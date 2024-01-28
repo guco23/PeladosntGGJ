@@ -83,6 +83,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2277293239700426243, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299493834305157842, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.017301785
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299493834305157842, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.01809638
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299493834305157842, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_Size.z
+      value: 0.015333362
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299493834305157842, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0014281457
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299493834305157842, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_Center.y
+      value: -0.006379776
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299493834305157842, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0016607421
+      objectReference: {fileID: 0}
     - target: {fileID: 6686653828427866462, guid: c65d30542211d504d958ef5af4f54b8b, type: 3}
       propertyPath: m_Name
       value: Foco
