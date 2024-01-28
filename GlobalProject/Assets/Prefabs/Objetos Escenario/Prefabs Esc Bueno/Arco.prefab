@@ -39,6 +39,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7037377872700481522}
     m_Modifications:
+    - target: {fileID: 4640202695769342824, guid: b76656d562690154e92e6b1e6538ae7b, type: 3}
+      propertyPath: m_Size.x
+      value: 2.070764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640202695769342824, guid: b76656d562690154e92e6b1e6538ae7b, type: 3}
+      propertyPath: m_Size.z
+      value: 2.7510376
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640202695769342824, guid: b76656d562690154e92e6b1e6538ae7b, type: 3}
+      propertyPath: m_Center.x
+      value: 0.25977603
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640202695769342824, guid: b76656d562690154e92e6b1e6538ae7b, type: 3}
+      propertyPath: m_Center.y
+      value: -0.06854402
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640202695769342824, guid: b76656d562690154e92e6b1e6538ae7b, type: 3}
+      propertyPath: m_Center.z
+      value: -0.1557163
+      objectReference: {fileID: 0}
     - target: {fileID: 4640202695996253329, guid: b76656d562690154e92e6b1e6538ae7b, type: 3}
       propertyPath: m_Name
       value: Arco
